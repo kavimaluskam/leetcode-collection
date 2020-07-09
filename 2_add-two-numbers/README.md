@@ -30,7 +30,6 @@
 <b>Explanation:</b> 342 + 465 = 807.
 </pre>
 
-
 ## Discussion
 
 The main logic of this algorithm is simple: Mathematical addition
@@ -52,3 +51,7 @@ current sig. fig. in every iteration. So every iteration perform addition as:
 `carry(0/1) + value_1 + value_2`
 
 Solving `3`, we simply perform similar addition. And make sure `2` is handled as well.
+
+With a single iteration loop with size = `max(l1.len, l2.len)`, we can
+easily interpret that both `Time Complexity` and `Space Complexity`
+is `O(m+n)`.
