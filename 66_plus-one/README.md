@@ -47,7 +47,7 @@ A problem very similar to [2. Add Two Numbers](../2_add-two-numbers).
 Addition start with the tailing element, and proceed while carry exist,
 or the list is completely scanned. A while loop will do.
 
-And handling the remaing carry after the whole list scanned.
+And handling the remaining carry after the whole list scanned.
 
 For `time complexity` it's obviously `O(n)`, scanning the whole list at worst.
 

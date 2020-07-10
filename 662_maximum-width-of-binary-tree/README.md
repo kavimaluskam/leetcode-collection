@@ -125,7 +125,7 @@ have:
 
 After this setup, we can try to use DFS / BFS to construct the tree value
 and compare the width on each tree level. And the problem is to be evaluated
-on each tree level, BFS is a better appraoch.
+on each tree level, BFS is a better approach.
 
 To save memory space, we try to record the maximum / minimum
 value on each node searching; and evaluate the width and reset the

@@ -35,9 +35,9 @@ return [<strong>0</strong>, <strong>1</strong>].
 
 Actually no much algorithm can be applied to this question.
 
-One can easily see a trivial soultion with brutial force to get
+One can easily see a trivial solution with brutal force to get
 an O(n^2) solution. On top of it, we enhance the solution with
-a hash map (`dict` in python) to scarfice `memory` for `time complexity`.
+a hash map (`dict` in python) to sacrifice `memory` for `time complexity`.
 
 Instead of looping twice, we try to add tested element to the hash map as:
 `{element: index}` in every iteration.
