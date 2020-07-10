@@ -1,6 +1,6 @@
 # [662] Maximum Width of Bi Nry Tree
 
-<https://leetcode.com/problems/maximum-width-of-bi Nry-tree/description/>
+<https://leetcode.com/problems/maximum-width-of-binary-tree/description/>
 
 - Tags: `Tree`
 
