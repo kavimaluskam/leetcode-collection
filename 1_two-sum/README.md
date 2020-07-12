@@ -42,5 +42,7 @@ a hash map (`dict` in python) to sacrifice `memory` for `time complexity`.
 Instead of looping twice, we try to add tested element to the hash map as:
 `{element: index}` in every iteration.
 
+### Complexity Analysis
+
 Thus only one loop is required.For worst case computation,
 giving `time complexity = O(n)`, and `space complexity = O(n)` for saving all but the last element.

@@ -49,6 +49,8 @@ or the list is completely scanned. A while loop will do.
 
 And handling the remaining carry after the whole list scanned.
 
+### Complexity Analysis
+
 For `time complexity` it's obviously `O(n)`, scanning the whole list at worst.
 
 For `space complexity` it's `O(1)`. As only memory and temp sum is in memory.

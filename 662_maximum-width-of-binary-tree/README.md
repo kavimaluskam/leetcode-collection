@@ -131,6 +131,8 @@ To save memory space, we try to record the maximum / minimum
 value on each node searching; and evaluate the width and reset the
 maximum / minimum value before each level iteration.
 
+### Complexity Analysis
+
 As we are using BFS to scan all the nodes, the `time complexity` is `O(n)`.
 And for worst case all nodes would be holding in the queue, `space complexity`
 of BFS is also `O(n)`.
