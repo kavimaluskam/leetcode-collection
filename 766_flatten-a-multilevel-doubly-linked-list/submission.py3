@@ -12,7 +12,7 @@ class Solution:
     def flatten(self, head: 'Node') -> 'Node':
         ptr = head
 
-        while t:
+        while ptr:
             if ptr.child:
                 next = ptr.next
                 ptr.next = ptr.child

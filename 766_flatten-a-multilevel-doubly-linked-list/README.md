@@ -109,12 +109,39 @@ visualize the flow.
 
 Consider the default testcase of this question:
 
+![Step 1](001.png)
 
-<!-- TODO: process node without affect the existing list structure -->
+Handling the case with child nodes' presence, we have to perform action
+among nodes: `3`, `4`, `7` and `10`, as in the below diagram. Wheres
+`red dotted arrow` indicates pointer to be removed, while the `blue arrows` are
+pointers to be added.
 
-<!-- TODO: main logic when child exist -->
+![Step 2](002.png)
 
-<!-- TODO: no need to handle nested child as ... -->
+After one step of flattening the child node's list is merged, and we can see
+any nested child nodes will be scanned and merged with the same operation, as we
+scanning down along the master list.
+
+![Step 3](003.png)
+
+We then come up with the below code to handle the operation. We use `ptr` to
+handle the current scanning node, hence will not destroy the existing list
+structure while we are scanning down the list.
+
+```python
+next = ptr.next
+ptr.next = ptr.child
+ptr.child.prev = ptr
+
+while ptr.child.next:
+    ptr.child = ptr.child.next
+
+if next:
+    next.prev = ptr.child
+
+ptr.child.next = next
+ptr.child = None
+```
 
 ### Complexity Analysis
 
