@@ -34,7 +34,7 @@
       5   3     9
 
 <b>Output:</b> 4
-<b>Expla Ntion:</b> The maximum width existing in the third level with the length 4 (5,3,null,9).
+<b>Explanation:</b> The maximum width existing in the third level with the length 4 (5,3,null,9).
 </pre>
 
 <p><b>Example 2:</b></p>
@@ -49,7 +49,7 @@
       5   3
 
 <b>Output:</b> 2
-<b>Expla Ntion:</b> The maximum width existing in the third level with the length 2 (5,3).
+<b>Explanation:</b> The maximum width existing in the third level with the length 2 (5,3).
 </pre>
 
 <p><b>Example 3:</b></p>
@@ -64,7 +64,7 @@
       5
 
 <b>Output:</b> 2
-<b>Expla Ntion:</b> The maximum width existing in the second level with the length 2 (3,2).
+<b>Explanation:</b> The maximum width existing in the second level with the length 2 (3,2).
 </pre>
 
 <p><b>Example 4:</b></p>
@@ -80,7 +80,7 @@
      /         \
     6           7
 <b>Output:</b> 8
-<b>Expla Ntion:</b>The maximum width existing in the fourth level with the length 8 (6,null,null,null,null,null,null,7).
+<b>Explanation:</b>The maximum width existing in the fourth level with the length 8 (6,null,null,null,null,null,null,7).
 
 
 </pre>

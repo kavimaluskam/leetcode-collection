@@ -50,7 +50,8 @@ Solving `2`, we pass the carry to the next sig. fig., save the remainder to
 current sig. fig. in every iteration. So every iteration perform addition as:
 `carry(0/1) + value_1 + value_2`
 
-Solving `3`, we simply perform similar addition. And make sure `2` is handled as well.
+Solving `3`, we simply perform similar addition. And make sure `2`is handled as
+well.
 
 ### Complexity Analysis
 
