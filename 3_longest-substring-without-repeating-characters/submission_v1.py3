@@ -14,7 +14,5 @@ class Solution:
                 d[s[j]] = 0
                 j += 1
                 r = max(r, j - i)
-            print(d)
-        return r
 
-Solution().lengthOfLongestSubstring("abcabcbb")
+        return r
