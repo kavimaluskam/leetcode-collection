@@ -4,7 +4,7 @@
 
 - Tags: `Hash Table`, `Two Pointers`, `String`, `Sliding Window`
 
-- Diffculty: Medium
+- Difficulty: Medium
 
 - Source Code: [./submission.py3](./submission.py3)
 
