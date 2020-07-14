@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-# [3] Longest Substring Without Repeating Characters
-
-<https://leetcode.com/problems/longest-substring-without-repeating-characters/description/>
-
-- Tags: `Hash Table`, `Two Pointers`, `String`, `Sliding Window`
-
-- Diffculty: Medium
-
-- Source Code: [./submission.py3](./submission.py3)
-
-- Acceptance: 30.3%
-
-- Total Accepted: 1578076
-
-- Total Submissions: 5215224
-
-- Testcase Example: "abcabcbb"
-
-## Description
-
-=======
 # [3] Longest Substring Without Repeating Characters
 
 <https://leetcode.com/problems/longest-substring-without-repeating-characters/description/>
@@ -40,7 +18,6 @@
 
 ## Description
 
->>>>>>> f468ac8f423e25024e3cd8733b8b55ac79999943
 <p>Given a string, find the length of the <b>longest substring</b> without repeating characters.</p>
 
 <div>
@@ -73,9 +50,6 @@
 </div>
 </div>
 </div>
-<<<<<<< HEAD
-
-=======
 
 ## Discussions
 
@@ -111,4 +85,3 @@ if char in map:
 Such operation is `O(1)` compared to `O(n)` in the above two approaches.
 
 Hence `Time Complexity` and `Space Complexity` are both `O(n)`.
->>>>>>> f468ac8f423e25024e3cd8733b8b55ac79999943
