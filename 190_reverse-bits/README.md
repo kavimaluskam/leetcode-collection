@@ -4,7 +4,7 @@
 
 - Tags: `Bit Manipulation`
 
-- Diffculty: Easy
+- Difficulty: Easy
 
 - Source Code: [./submission.py3](./submission.py3)
 

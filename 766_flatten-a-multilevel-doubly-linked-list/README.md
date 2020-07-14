@@ -4,7 +4,7 @@
 
 - Tags: `Linked List`, `Depth-first Search`
 
-- Diffculty: Medium
+- Difficulty: Medium
 
 - Source Code: [./submission.py3](./submission.py3)
 
