@@ -67,6 +67,9 @@ Intuitively, we have `k` smaller than `n`, locating / searching for the largest
 Note that to prevent infinity loop issue, we limit our searching range by an
 extra 1 in every iteration.
 
+And for the last case, we return `tail` instead of `head` as `tail` <= `head`
+after breaking the loop.
+
 ### Complexity Analysis
 
 For binary search problem. our `time complexity` would be `O(log(n))`;
