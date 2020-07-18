@@ -56,4 +56,4 @@ numbers to be multiply by twice, and handle the case where numbers are odd, the
 algorithms are mostly finished.
 
 Similar to the binary search issue, this algorithm's `time complexity` is
-`O(log n)`, with constant `space complexity`.
+`O(log(n))`, with constant `space complexity`.
