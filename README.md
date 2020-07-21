@@ -23,6 +23,7 @@ Personal leetcode challenge/documentation with
 | 190 | [Reverse Bits](190_reverse-bits) | Bit Manipulation | Easy |
 | 151 | [Reverse Words in a String](151_reverse-words-in-a-string) | String | Medium |
 | 203 | [Remove Linked List Elements](203_remove-linked-list-elements) | Linked List | Easy |
+| 210 | [Course Schedule II](210_course-schedule-ii) | Depth-first Search, Breadth-first Search, Graph, Topological Sort | Medium |
 | 264 | [Ugly Number II](264_ugly-number-ii) | Math, Dynamic Programming, Heap | Medium |
 | 347 | [Top K Frequent Elements](347_top-k-frequent-elements) | Hash Table, Heap | Medium |
 | 441 | [Arranging Coins](441_arranging-coins) | Math, Binary Search | Easy |
