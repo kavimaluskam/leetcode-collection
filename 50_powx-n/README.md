@@ -51,9 +51,23 @@
 
 ## Discussion
 
-A typical reduce and base algorithm will do. Consider we reduce the size of
-numbers to be multiply by twice, and handle the case where numbers are odd, the
-algorithms are mostly finished.
+This problem requires numerous (`n`) but identical operations (multiplication),
+which is a good set up of *reduce and base* algorithms. That is, we can easily
+reduce the data size in each iteration, and end up solve the problem by
+recursion. It's a type of questions like *binary search*.
 
-Similar to the binary search issue, this algorithm's `time complexity` is
-`O(log(n))`, with constant `space complexity`.
+### Solution
+
+We try to reduce the size of `n` by half in each iteration. For case
+where n is odd, we minus 1 from `n` and perform multiplication directly.
+
+Moreover we have to handle the root case (`n == 0`) and negative `n`, as stated
+in the problem.
+
+### Complexity Analysis
+
+- Time Complexity: `O(log(n))`, as the algorithm involves log_2(n)
+  iterations, which is similar to binary search.
+
+- Space Complexity: `O(log(n))`, as the algorithm is recursive and involves
+  log_2(n) iterations, the root execution would hold maximum log_2(n) instance.
