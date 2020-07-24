@@ -60,5 +60,6 @@ end node. We include the path into our result.
 - Time Complexity: `O(V+E)`, for DFS in a graph, wheres `V` is number of nodes
   and `E` is the number of edges.
 
-- Space Complexity: `O(E)`, for the result set in memory, which is determined
-  by the number of edges in the graph.
+- Space Complexity: `O(V * E)`, for the result set in memory, which the number
+  is determined by the number of edges, while the size is determined by the
+  number of vertex.
