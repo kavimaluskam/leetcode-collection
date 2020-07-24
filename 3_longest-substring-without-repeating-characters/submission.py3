@@ -2,7 +2,6 @@ class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         start_ptr = 0
         cache = {}
-
         i = 0
         result = 0
 
