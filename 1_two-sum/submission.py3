@@ -1,17 +1,19 @@
+from typing import List
+
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        nums_dict = {}
+        cache = {}
 
         for i in range(len(nums)):
             diff = target - nums[i]
 
-            if diff in nums_dict and nums_dict.get(diff) is not i:
+            if diff in cache and cache.get(diff) is not i:
                 return [
-                    min(i, nums_dict.get(diff)),
-                    max(i, nums_dict.get(diff)),
+                    min(i, cache.get(diff)),
+                    max(i, cache.get(diff)),
                 ]
 
             else:
-                nums_dict.update({
+                cache.update({
                     nums[i]: i
                 })

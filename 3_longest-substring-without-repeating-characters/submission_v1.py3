@@ -1,18 +1,18 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
+        start_ptr = 0
+        cache = {}
         i = 0
-        j = 0
-        d = {}
-        r = 0
+        result = 0
 
-        while j < len(s):
-            if s[j] in d:
-                del d[s[i]]
-                i += 1
+        while i < len(s):
+            if s[i] in cache:
+                del cache[s[start_ptr]]
+                start_ptr += 1
 
             else:
-                d[s[j]] = 0
-                j += 1
-                r = max(r, j - i)
+                cache[s[i]] = 0
+                i += 1
+                result = max(result, i - start_ptr)
 
-        return r
+        return result

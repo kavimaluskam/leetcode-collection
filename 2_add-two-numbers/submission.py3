@@ -20,16 +20,8 @@ class Solution:
             node.val = s % 10
             node.next = ListNode(s//10)
 
-            if l1.next:
-                l1 = l1.next
-            else:
-                l1 = ListNode(0)
-
-            if l2.next:
-                l2 = l2.next
-            else:
-                l2 = ListNode(0)
-
+            l1 = l1.next or ListNode(0)
+            l2 = l2.next or ListNode(0)
             node = node.next
 
         if l1:

@@ -33,17 +33,33 @@ return [<strong>0</strong>, <strong>1</strong>].
 
 ## Discussion
 
-Actually no much algorithm can be applied to this question.
+### Trail 1
 
-One can easily see a trivial solution with brutal force to get
-an O(n^2) solution. On top of it, we enhance the solution with
-a hash map (`dict` in python) to sacrifice `memory` for `time complexity`.
+One can easily see a trivial solution with brutal force. We loop through each
+element `x` in the list, and loop through each element again to check of
+`target - x`. Yet this is a very slow solution giving time complexity `O(n^2)`.
 
-Instead of looping twice, we try to add tested element to the hash map as:
-`{element: index}` in every iteration.
+### Trial 2
+
+Based on *trial 1*, we can enhance the solution by preparing a hash map
+(`dict` in python). Hence we loop through each element `x` in the list, and
+check for element `target - x` in the hash map. As look up in hash map is
+atomic, the time complexity of the algorithm improved to `O(n)`. While the hash
+map takes space of `O(n)`. We sacrifice memory for algorithm performance.
+
+### Solution
+
+Further improving *trail 2*, we can preparing the hash map while looping
+through each element in the list. For cases where no correct pair is found,
+we add the new element to the hash map as: `{element: index}` in each iteration.
+
+Although the time complexity and space complexity remains unchanged, but for
+normal cases, the correct pair is found before looping through every element,
+so the actual iteration and size of map is smaller than `n`.
 
 ### Complexity Analysis
 
-Thus only one loop is required.For worst case computation,
-giving `time complexity = O(n)`, and `space complexity = O(n)` for saving all
-but the last element.
+- Time Complexity: `O(n)`, as only one looping of the input list is required.
+
+- Space Complexity: `O(n)`, as a hash map of the elements in input array is
+  created.

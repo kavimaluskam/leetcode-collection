@@ -33,28 +33,33 @@
 ## Discussion
 
 The main logic of this algorithm is simple: Mathematical addition
-digit by digit, with digit saving in linked list.
-Except tricky points to be handled:
+digit by digit, with digits in linked lists.
+Yet there are tricky points to be handled:
 
-1. when there is only 1 value in the sig. fig.
+1. When two numbers have different numbers of significant figures,
 
-1. carry with value > 10 occur
+1. When carry digits exist in the addition, and
 
-1. handling the greatest sig. fig.
+1. When the most significant figures of the sum is carry.
 
-Solving `1`, we perform addition whenever there is at least 1 value in current
-sig. fig. And when one of the linked list is ending, we add a
-pesudo node `ListNode(0)` to it to proceed the addition.
+### Solution
 
-Solving `2`, we pass the carry to the next sig. fig., save the remainder to
-current sig. fig. in every iteration. So every iteration perform addition as:
+Solving `1`, when there is 1 linked list running out of nodes during
+addition, we proceed the addition with the missing digits replaced by 0.
+
+Solving `2`, we cache any carry digit in each iteration, and pass the digit
+to the next digital addition. The remainder of the digital sum is saved
+in the result linked list. Thus every iteration perform addition as:
 `carry(0/1) + value_1 + value_2`
 
-Solving `3`, we simply perform similar addition. And make sure `2`is handled as
-well.
+Solving `3`, we perform similar addition in `1`, check and handle `2` after the
+last iteration.
 
 ### Complexity Analysis
 
-With a single iteration loop with size = `max(l1.len, l2.len)`, we can
-easily interpret that both `Time Complexity` and `Space Complexity`
-is `O(m+n)`.
+- Time Complexity: `O(max(m, n))`, wheres `m` and `n` are the size of the two
+  input list. As only one looping through the larger input linked list is
+  required.
+
+- Space Complexity: `O(max(m, n))`, as the result linked list's size is
+  determined by the larger input linked list

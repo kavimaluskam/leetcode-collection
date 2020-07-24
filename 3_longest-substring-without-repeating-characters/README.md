@@ -53,28 +53,39 @@
 
 ## Discussions
 
-This problem is handled with 3 submission / trial.
+### Trial 1
 
-[The first one](./submission_v0.py3) is rather naive approach.
+[Trial 1](./submission_v0.py3) gives a rather naive approach.
+We loop through characters in input string to search for the longest substring,
+and we use a hash map to save the characters for duplicate character detection.
 
-We slide through the list to get scan for substring, and we use a dict / map
-to save the substring for duplicate character detection. But for the worst
-duplicate character we have to remove all but one element in the list.
+When duplicate character is found we have to remove the character in hashmap
+until the duplicated character is removed. We have to first locate all the keys
+in the hash map and scan for the first one for each removal. Which is performing
+badly.
 
-`Time Complexity` would be `O(2n) = O(n)` and `Space Complexity`
-would be `O(n)`.
+Thus this algorithm gives time complexity `O(n^2)` and space complexity `O(n)`.
 
-[The second one](./submission_v1.py3) improve with a starting pointer.
-Similar to the first implementation, we slide through the list and scan for
-substring, with a dict / map to save the substring. Besides we have a starting
-pointer to track the start of the substring, or `Sliding Window`. The pro is
-we no longer have to track the length of the substring by the dict itself.
+### Trial 2
 
-`Time Complexity` and `Space Complexity` remains `O(2n) = O(n)` and `O(n)`.
+[Trial 2](./submission_v1.py3) improves *trial 1* with a starting pointer.
+Again we loop through characters in input string to search fir the
+longest substring, with a hash map saving the characters.
+Besides we have a starting pointer to track the start of the substring,
+(we can also interpret this approach as `Sliding Window`).
 
-[The final one](./submission.py3) further improves by saving the position
-of the character in the dict / map. With the starting pointer value in map,
-we can easily switch to the duplicated character's position by below procedure.
+Ths benefit is that we no longer have to track the length of the substring
+by the dict itself.
+
+This algorithm improves time complexity to `O(2n) = O(n)`
+and space complexity remains `O(n)`.
+
+### Solution
+
+[The final solution](./submission.py3) further improves *trial 2* by saving
+the position of the character in the hash map. So when duplicated character is
+found, no removal in the hash map takes place. Instead we move the starting
+pointer to the position right after the duplicated character's latest position.
 
 ```python
 if char in map:
@@ -84,4 +95,10 @@ if char in map:
 
 Such operation is `O(1)` compared to `O(n)` in the above two approaches.
 
-Hence `Time Complexity` and `Space Complexity` are both `O(n)`.
+### Complexity Analysis
+
+- Time Complexity: `O(n)`, as through the looping in the input string,
+  only atomic pointer update takes place when duplicated character is found.
+
+- Space Complexity: `O(n)`, as we only maintain the hash map with each
+  characters' value and position
