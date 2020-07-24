@@ -42,15 +42,21 @@
 
 ## Discussion
 
-A problem very similar to [2. Add Two Numbers](../2_add-two-numbers).
+A problem very similar to [2. Add Two Numbers](../2_add-two-numbers):
+Mathematical addition for a integer with digits in list. As only `1` is being
+added to the integer, the algorithm is rather straight forward.
 
-Addition start with the tailing element, and proceed while carry exist,
-or the list is completely scanned. A while loop will do.
+### Solution
 
-And handling the remaining carry after the whole list scanned.
+We perform addition from the last element of list, and carry on addition as long
+as carry digit exists. For simplicity sake, the starting `1` is also
+handled as a carry digit.
+
+At last, we have to check and handle if carry digits exists after we
+loop through all digits in the list.
 
 ### Complexity Analysis
 
-For `time complexity` it's obviously `O(n)`, scanning the whole list at worst.
+- Time Complexity: `O(n)`, scanning the whole list at worst.
 
-For `space complexity` it's `O(1)`. As only memory and temp sum is in memory.
+- Space Complexity: `O(1)`. As only memory and temp sum is in memory.
