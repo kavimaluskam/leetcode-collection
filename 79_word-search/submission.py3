@@ -1,15 +1,49 @@
 class Solution:
     def exist(self, board, word):
-        word_ptr = 0
-        y, x = 0, 0
-        stack = []
+        self.len_y, self.len_x, self.len_w = len(board), len(board[0]), len(word)
+        self.board, self.word = board, word
 
-        while y < len(board) and x < len(board[0]):
+        y, x, w = 0, 0, 0
 
-            if x == len(board[0]) - 1:
+        while y < self.len_y and x < self.len_x:
+            if self.search(x, y, w, []):
+                return True
+
+            if x == self.len_x - 1:
                 y, x = y + 1, 0
             else:
                 x = x + 1
+
         return False
 
-# print(Solution().exist([["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], "ABCCED"))
+    def search(self, x, y, w, cache):
+        if (y, x) in cache:
+            return False
+
+        if x < 0 or x >= self.len_x:
+            return False
+
+        if y < 0 or y >= self.len_y:
+            return False
+
+        if self.board[y][x] == self.word[w]:
+            if w == self.len_w - 1:
+                return True
+
+            res = self.search(x + 1, y, w + 1, cache + [(y, x)])
+            if res:
+                return res
+
+            res = self.search(x, y + 1, w + 1, cache + [(y, x)])
+            if res:
+                return res
+
+            res = self.search(x - 1, y, w + 1, cache + [(y, x)])
+            if res:
+                return res
+
+            res = self.search(x, y - 1, w + 1, cache + [(y, x)])
+            if res:
+                return res
+        else:
+            return False
