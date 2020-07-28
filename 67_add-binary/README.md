@@ -45,18 +45,55 @@
 
 ## Discussion
 
-A problem very similar to [2. Add Two Numbers](../2_add-two-numbers).
+A problem very similar to [2. Add Two Numbers](../2_add-two-numbers):
+Mathematical addition for binary numbers in string. As the input date is
+in binary string format, i try to keep the data type and handle the addition
+by conditional cases.
 
-Addition start with the tailing element, and proceed while carry exist,
-or the list is completely scanned. A while loop will do.
+### Solution
 
-And handling the remaining carry after the whole list scanned.
+Similar to [2. Add Two Numbers](../2_add-two-numbers), we have to handle:
 
-As the question is based on binary string, i try to avoid type changing and
-handle addition with case control.
+1. When two numbers have different numbers of significant figures,
+
+1. When carry digits exist in the addition,
+
+1. When the most significant figures of the sum is carry.
+
+Solving `1`, when there is 1 binary string running out of characters during
+addition, we proceed the addition with the missing digits replaced by `"0"`.
+
+Handling the addition, we view it as string conditional cases:
+
+|  ID | string A | string B | carry | result |
+| --- |-------- | -------- | ----- | ------ |
+|   1 |       0 |        0 |     0 |      0 |
+|   2 |       0 |        0 |     1 |      1 |
+|   3 |       0 |        1 |     0 |      1 |
+|   4 |       0 |        1 |     1 |     10 |
+|   5 |       1 |        0 |     0 |      1 |
+|   6 |       1 |        0 |     1 |     10 |
+|   7 |       1 |        1 |     0 |     10 |
+|   8 |       1 |        1 |     1 |     11 |
+
+Hence we can conclude:
+
+1. When string A equals string B (case `1` - `2`, `7` - `8`), we can see the
+   result digit equals to carry, while the result digit's equals string A
+   and string B's value,
+
+1. When string A does not equals string B (case `3` - `6`), we can see the
+   result dominated by carry. When carry is `"0"`, result becomes `"1"`;
+   when carry is `"1"`, result becomes `"10"`.
+
+Hence we apply this logic in the additional handling. And after the handling of
+`2` and `3`, the solution completes.
 
 ### Complexity Analysis
 
-For `time complexity` it's obviously `O(n)`, scanning the whole list at worst.
+- Time Complexity: `O(max(m, n))`, wheres `m` and `n` are the size of the two
+  input binary string. As only one looping through the larger binary string is
+  required.
 
-For `space complexity` it's `O(1)`. As only memory and temp sum is in memory.
+- Space Complexity: `O(max(m, n))`, as the result binary string's size is
+  determined by the larger input binary string.
