@@ -62,4 +62,4 @@ last iteration.
   required.
 
 - Space Complexity: `O(max(m, n))`, as the result linked list's size is
-  determined by the larger input linked list
+  determined by the larger input linked list.
