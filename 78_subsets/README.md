@@ -38,36 +38,53 @@
 &nbsp; []
 ]</pre>
 
-# Discussion
+## Discussion
 
-This problem is solved with mathematical / binary approach.
+The problem requires all possible subsets given a distinct set of integers.
+We know the size of the answer would be of size `2 ^ n` for subset problem.
 
-First of all we know that the solution of a list with size `n` would be
-a set of size `2^n`. Considering the above example:
+Further more, we can consider the subset solutions to be different combination
+of each element in the input set. Consider the example with input `[1, 2, 3]`:
 
-```python
-input = [1,2,3]
-
-result = [
-  [],         # [None, None, None]
-  [1],        # [1, None, None]
-  [2],        # [None, 2, None]
-  [3],        # [None, None, 3]
-  [1, 2],     # [1, 2, None]
-  [1, 3],     # [1, None, 3]
-  [2, 3],     # [None, 2, 3]
-  [1, 2, 3]   # [1, 2, 3]
-]
-```
+|      Subset |  Integer Combination | Binary Form | Decimal Form |
+| ----------- | -------------------- | ----------- | ------------ |
+|        `[]` | `[None, None, None]` |       `000` |          `0` |
+|       `[1]` |    `[None, None, 1]` |       `001` |          `1` |
+|       `[2]` |    `[None, 2, None]` |       `010` |          `2` |
+|    `[1, 2]` |       `[None, 2, 1]` |       `011` |          `3` |
+|       `[3]` |    `[3, None, None]` |       `100` |          `4` |
+|    `[1, 3]` |       `[3, None, 1]` |       `101` |          `5` |
+|    `[2, 3]` |       `[3, 2, None]` |       `110` |          `6` |
+| `[1, 2, 3]` |          `[3, 2, 1]` |       `111` |          `7` |
 
 We can see the result is a set of combination of *switching on/off* of each
-element in the input list.
+element in the input list. And we can map the combination into binary string,
+then decimal integers below `n`.
 
-Hence, we can easily obtain the list of element state by the binary form of
-integers smaller than `n`.
+Thus we can solve the problem by mapping all those integers into different
+subsets.
+
+### Solution
+
+Given input with size `n`, we have result with size `2 ^ n`.
+For all integers in `[0, 2^n)`, we can change it to binary string format, and
+thus integer combination of set integers, and finally different subsets.
+
+The most difficult part is converting integer to binary string.
+Simply apply `bin(i)` will yield binary string `0b*****` from integer `i`.
+
+Yet to allow binary string carrying all `n` digits, we should add leading `0`s
+for small integers. Achieving this we add `n` to every integer `i`, so every
+binary string will be `0b1*****`. Omitting the first 3 characters and we can
+extract the binary form string.
+
+Thus viewing the binary form string as a list of index respect to the input
+list, we can obtain the corresponding subset.
 
 ### Complexity Analysis
 
-Consider the result set would be of size `2^n`, and each result would be of
-a state with size `n`, we can conclude both `Time Complexity` and `Space
-Complexity` would be `O(n * 2^n)`.
+- Time Complexity: `O(n * 2 ^ n)`, considering the solution set of size
+  `2 ^ n`, with each subset have at most `n` elements
+
+- Space Complexity: `O(n * 2 ^ n)`, considering the solution set of size
+  `2 ^ n`, with each subset have at most `n` elements

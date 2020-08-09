@@ -1,15 +1,17 @@
+from typing import List
+
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
-        r = []
+        result = []
+        length = len(nums)
+        size = 2 ** length
 
-        l = 2 ** len(nums)
+        for i in range(size):
+            binary = bin(i | size)[3:]
+            result.append([
+                nums[j]
+                for j in range(length)
+                if binary[j] == '1'
+            ])
 
-        for i in range(l):
-            b = bin(i)[2:][::-1]
-            t = []
-            for j in range(len(b)):
-                if b[j] == '1':
-                    t.append(nums[j])
-            r.append(t)
-
-        return r
+        return result
