@@ -20,6 +20,7 @@ Personal leetcode challenge/documentation with
 | 103 | [Binary Tree Zigzag Level Order Traversal](103_binary-tree-zigzag-level-order-traversal) | Stack, Tree, Breadth-first Search | Medium |
 | 107 | [Binary Tree Level Order Traversal II](107_binary-tree-level-order-traversal-ii) | Tree, Breadth-first Search | Easy |
 | 151 | [Reverse Words in a String](151_reverse-words-in-a-string) | String | Medium |
+| 154 | [Find Minimum in Rotated Sorted Array II](154_find-minimum-in-rotated-sorted-array-ii) | Array, Binary Search | Hard |
 | 190 | [Reverse Bits](190_reverse-bits) | Bit Manipulation | Easy |
 | 151 | [Reverse Words in a String](151_reverse-words-in-a-string) | String | Medium |
 | 203 | [Remove Linked List Elements](203_remove-linked-list-elements) | Linked List | Easy |
