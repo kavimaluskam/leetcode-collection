@@ -16,6 +16,7 @@ Personal leetcode challenge/documentation with
 | 78 | [Subsets](78_subsets) | Array, Backtracking, Bit Manipulation | Medium |
 | 79 | [Word Search](79_word-search) | Array, Backtracking | Medium |
 | 100 | [Same Tree](100_same-tree) | Tree, Depth-first Search | Easy |
+| 106 | [Construct Binary Tree from Inorder and Postorder Traversal](106_construct-binary-tree-from-inorder-and-postorder-traversal) | Array, Tree, Depth-first Search | Medium |
 | 103 | [Binary Tree Zigzag Level Order Traversal](103_binary-tree-zigzag-level-order-traversal) | Stack, Tree, Breadth-first Search | Medium |
 | 107 | [Binary Tree Level Order Traversal II](107_binary-tree-level-order-traversal-ii) | Tree, Breadth-first Search | Easy |
 | 151 | [Reverse Words in a String](151_reverse-words-in-a-string) | String | Medium |
