@@ -24,6 +24,7 @@ Personal leetcode challenge/documentation with
 | 151 | [Reverse Words in a String](151_reverse-words-in-a-string) | String | Medium |
 | 203 | [Remove Linked List Elements](203_remove-linked-list-elements) | Linked List | Easy |
 | 264 | [Ugly Number II](264_ugly-number-ii) | Math, Dynamic Programming, Heap | Medium |
+| 274 | [H-Index](274_h-index) | Hash Table, Sort | Medium |
 | 347 | [Top K Frequent Elements](347_top-k-frequent-elements) | Hash Table, Heap | Medium |
 | 441 | [Arranging Coins](441_arranging-coins) | Math, Binary Search | Easy |
 | 662| [Maximum Width of Binary Tree](662_maximum-width-of-binary-tree) | Tree | Medium |
