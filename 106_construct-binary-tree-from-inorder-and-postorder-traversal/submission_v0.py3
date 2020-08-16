@@ -35,5 +35,3 @@ class Solution:
         )
 
         return root_node
-
-
