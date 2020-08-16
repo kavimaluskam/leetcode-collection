@@ -14,6 +14,7 @@ Personal leetcode challenge/documentation with
 | 66 | [Plus One](66_plus-one) | Array | Easy |
 | 67 | [Add Binary](67_add-binary) | Math, String | Easy |
 | 78 | [Subsets](78_subsets) | Array, Backtracking, Bit Manipulation | Medium |
+| 79 | [Word Search](79_word-search) | Array, Backtracking | Medium |
 | 100 | [Same Tree](100_same-tree) | Tree, Depth-first Search | Easy |
 | 103 | [Binary Tree Zigzag Level Order Traversal](103_binary-tree-zigzag-level-order-traversal) | Stack, Tree, Breadth-first Search | Medium |
 | 107 | [Binary Tree Level Order Traversal II](107_binary-tree-level-order-traversal-ii) | Tree, Breadth-first Search | Easy |
