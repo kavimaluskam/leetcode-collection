@@ -8,6 +8,20 @@ from typing import List
 #         self.right = right
 
 class Solution:
+    def buildTree(self, inorder, postorder):
+        self.postorder = postorder
+        self.inorder_cache = {
+            inorder[i]:i
+            for i in range(len(inorder))
+        }
+
+        return self.build_tree_by_index(
+            in_start=0,
+            in_end=len(inorder) - 1,
+            post_start=0,
+            post_end=len(postorder) - 1,
+        )
+
     def build_tree_by_index(self, in_start, in_end, post_start, post_end):
         if in_start > in_end or post_start > post_end:
             return None
@@ -35,18 +49,3 @@ class Solution:
         )
 
         return root_node
-
-
-    def buildTree(self, inorder, postorder):
-        self.postorder = postorder
-        self.inorder_cache = {
-            inorder[i]:i
-            for i in range(len(inorder))
-        }
-
-        return self.build_tree_by_index(
-            in_start=0,
-            in_end=len(inorder) - 1,
-            post_start=0,
-            post_end=len(postorder) - 1,
-        )

@@ -24,8 +24,15 @@ class Solution:
             if inorder[i] == root_value:
                 break_ptr = i
 
-        root_node.left = self.buildTree(inorder[:break_ptr], postorder[:break_ptr])
-        root_node.right = self.buildTree(inorder[break_ptr+1:], postorder[break_ptr:-1])
+        root_node.left = self.buildTree(
+            inorder=inorder[:break_ptr],
+            postorder=postorder[:break_ptr]
+        )
+
+        root_node.right = self.buildTree(
+            inorder=inorder[break_ptr+1:],
+            postorder=postorder[break_ptr:-1]
+        )
 
         return root_node
 
