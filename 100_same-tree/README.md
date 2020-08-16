@@ -63,13 +63,16 @@
 A DFS algorithm would be able to scan down both tree at the same time, and
 pointing out difference when spotted.
 
+### Solution
+
+A simple DFS algorithm on both tree would works.
 Note that after we compare the value for both nodes, passing child node to
 recursion is sufficient enough for scanning.
 
 ### Complexity Analysis
 
-For `time complexity` it's obviously `O(n)`, scanning the whole tree with DFS.
+- Time complexity: `O(n)`, for simple DFS scanning the whole tree
 
-For `space complexity` it's `O(log(n))` ~ `O(n)` with DFS. Holding half of the
-nodes in recursion for a completely balanced tree, or the whole tree for a
-completely unbalanced tree.
+- Space complexity:  `O(n)`, for simple DFS holding all nodes in recursion.
+  Note that for perfect balanced binary tree, space complexity would be just
+  `O(log(n))` as the depth of the tree would be `log(n)`.
