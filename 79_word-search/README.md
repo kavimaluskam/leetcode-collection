@@ -61,7 +61,7 @@ Special point of this problem involves:
   (which is very reasonable).
 
 As explained in below: we start with a rather straight forward algorithm and
-see if any performance can be made.
+see if any enhancement can be made.
 
 ### Trial 1
 
