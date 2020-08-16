@@ -6,7 +6,7 @@ class Solution:
         y, x, w = 0, 0, 0
 
         while y < self.len_y and x < self.len_x:
-            if self.search(x, y, w):
+            if self.search(x, y, w, []):
                 return True
 
             if x == self.len_x - 1:
@@ -16,7 +16,10 @@ class Solution:
 
         return False
 
-    def search(self, x, y, w):
+    def search(self, x, y, w, cache):
+        if (y, x) in cache:
+            return False
+
         if x < 0 or x >= self.len_x:
             return False
 
@@ -29,13 +32,7 @@ class Solution:
         if w == self.len_w - 1:
             return True
 
-        cache, self.board[y][x] = self.board[y][x], ''
-
-        res = self.search(x + 1, y, w + 1) \
-            or self.search(x, y + 1, w + 1) \
-            or self.search(x - 1, y, w + 1) \
-            or self.search(x, y - 1, w + 1)
-
-        self.board[y][x] = cache
-
-        return res
+        return self.search(x + 1, y, w + 1, cache + [(y, x)]) \
+            or self.search(x, y + 1, w + 1, cache + [(y, x)]) \
+            or self.search(x - 1, y, w + 1, cache + [(y, x)]) \
+            or self.search(x, y - 1, w + 1, cache + [(y, x)])
