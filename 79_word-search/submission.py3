@@ -26,24 +26,13 @@ class Solution:
         if y < 0 or y >= self.len_y:
             return False
 
-        if self.board[y][x] == self.word[w]:
-            if w == self.len_w - 1:
-                return True
-
-            res = self.search(x + 1, y, w + 1, cache + [(y, x)])
-            if res:
-                return res
-
-            res = self.search(x, y + 1, w + 1, cache + [(y, x)])
-            if res:
-                return res
-
-            res = self.search(x - 1, y, w + 1, cache + [(y, x)])
-            if res:
-                return res
-
-            res = self.search(x, y - 1, w + 1, cache + [(y, x)])
-            if res:
-                return res
-        else:
+        if self.board[y][x] != self.word[w]:
             return False
+
+        if w == self.len_w - 1:
+            return True
+
+        return self.search(x + 1, y, w + 1, cache + [(y, x)]) \
+            or self.search(x, y + 1, w + 1, cache + [(y, x)]) \
+            or self.search(x - 1, y, w + 1, cache + [(y, x)]) \
+            or self.search(x, y - 1, w + 1, cache + [(y, x)])
