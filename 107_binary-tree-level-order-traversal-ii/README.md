@@ -48,8 +48,15 @@ For tree problems require operations on each level, we use BFS.
 Bare in mind the result require reverse of node's value. Hence we always
 insert the level scanning to the beginning of result.
 
+### Solution
+
+A simple BFS basically solves the problem. And we each level's result to the
+beginning of result but not reordering it, to give a better time performance.
+
 ### Complexity Analysis
 
-As we are using BFS to scan all the nodes, the `time complexity` is `O(n)`.
-And for worst case all nodes would be holding in the queue, `space complexity`
-of BFS is also `O(n)`.
+- Time Complexity: `O(n)`, as we use BFS to scan all nodes in the tree.
+
+- Space Complexity: `O(n)`, as we have to return the traversal of all nodes
+  in the tree. And we use BFS to handle level-wise operations,
+  and numbers of elements cached at each row is bounded by `n`.
