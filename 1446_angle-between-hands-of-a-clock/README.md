@@ -82,5 +82,19 @@ There are two more tricky points:
 
 1. Consider hours >= 12
 
-1. Consider degree between the two hands always small than 180. Thus we choose
-the opposite angle when the value > 180.
+1. Consider degree between the two hands always small than 180.
+   Thus we choose the opposite angle when the value > 180.
+
+### Solution
+
+Our solution simply evaluates `deg_m` for minutes and `deg_h` for hours.
+We use `(hour % 12)` to prevent hours larger than 12.
+
+And we take `min(result, 360 - result)` as the final solution to prevent values
+larger than 180.
+
+### Complexity Analysis
+
+- Time complexity: `O(1)` as only numeric calculation is involved.
+
+- Space complexity: `O(1)` as only numeric calculation is involved.
