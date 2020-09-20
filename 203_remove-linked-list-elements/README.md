@@ -43,8 +43,19 @@ There are different approach to do. Instead of [creating a pesudo-node at the
 beginning](https://leetcode.com/explore/challenge/card/july-leetcoding-challenge/546/week-3-july-15th-july-21st/3396/discuss/746590/O(n)-time-O(1)-space-solution-wvideo-whiteboard-explanation),
 i cache the previously scanned node, and check current node's value.
 
+### Solution
+
+The solution begins with a loop iterate through all the elements,
+and we keep update the `cache` to prepare to the link-reconstruction.
+
+Once the desired value is scanned, we skip the `cache` update to skip it
+from reconstruction.
+
+Besides we managed a variable `cache_head`, in order to return the Linked-List
+from the beginning.
+
 ### Complexity Analysis
 
-`Time Complexity` of this algorithm is `O(n)` as only one scanning to the list
-is required. And `Space Complexity` of this algorithm is `O(1)` as we only
-have to maintain the cached node.
+- Time Complexity: `O(n)` as only one scanning of the list is required.
+
+- Space Complexity: `O(1)` as only two nodes are cached in memory.
