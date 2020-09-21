@@ -56,6 +56,6 @@ from the beginning.
 
 ### Complexity Analysis
 
-- Time Complexity: `O(n)` as only one scanning of the list is required.
+- Time Complexity: `O(n)`, as only one scanning of the list is required.
 
-- Space Complexity: `O(1)` as only two nodes are cached in memory.
+- Space Complexity: `O(1)`, as only two nodes are cached in memory.
