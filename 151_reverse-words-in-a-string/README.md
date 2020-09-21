@@ -63,16 +63,26 @@
 
 ## Discussion
 
-We break down the string into words list, and perform reverse with two pointers.
+The problem requires us to reverse the words in a sentence string.
+So we think of breaking down the string into words list,
+and perform reverse with two pointers.
 
 Interesting that [one solution in leetcode](https://leetcode.com/problems/reverse-words-in-a-string/discuss/737801/Python-Simple-O(N)-solution-with-simple-case-checking)
-mentioned `string.split()` in python can remove all space built in, hence give a
+mentioned `string.split()` in python can remove all space, hence giving a
 more elegant solution.
+
+### Solution
+
+We first break down the sentence into list of word by splitting,
+then we have two pointers from the beginning and end, iterating till they meet.
+
+In each iteration, we check if any space is scanned and we will skip it,
+then we interchange the values at the two pointers, and update the two pointers
+after complete.
 
 ### Complexity Analysis
 
-For `time complexity` it's obviously `O(n)`, scanning the string into words,
-and perform reverse with two pointers along the array.
+- Time complexity: `O(n)`, scanning the string into words,
+  and perform reverse with  two pointers along the array.
 
-For `space complexity` it's `O(n)` as well. As the size of the words array is
-determined by input string size.
+- Space complexity: `O(n)`, as we have to put the word array in memory.
