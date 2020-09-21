@@ -45,14 +45,19 @@ return its zigzag level order traversal as:<br />
 ## Discussion
 
 A problem very similar to [107. Binary Tree Level Order Traversal II](./107_binary-tree-level-order-traversal-ii).
+While handling is needed for the zigzag level order.
 
 For tree problems require operations on each level, we use BFS.
 
-The result requires node traversal with zigzag level order. So we switch the
-order or result appending by each level.
+### Solution
+
+A simple BFS basically solves the problem. And determine the level of the
+current iteration in the input tree by checking the length of the final result
+we are updating.
 
 ### Complexity Analysis
 
-As we are using BFS to scan all the nodes, the `time complexity` is `O(n)`.
-And for worst case all nodes would be holding in the queue, `space complexity`
-of BFS is also `O(n)`.
+- Time Complexity: `O(n)`, as we use BFS to scan all nodes in the tree.
+
+- Space Complexity: `O(n)`, as we use BFS to handle level-wise operations,
+  and numbers of elements cached at each row is bounded by `n`.
