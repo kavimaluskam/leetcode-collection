@@ -50,7 +50,9 @@ To include all *ugly numbers*, we can maintain 3 queues: `q_2`, `q_3`, `q_5`,
 such that for every *ugly numbers* `u`, we have:
 `2 * u in q_2`, `3 * u in q_3`, and `5 * u in q_5`.
 
-Under this setup we can confirm that every *ugly number* is included in
+### Solution
+
+Under the above setup we can confirm that every *ugly number* is included in
 `q_2 + q_3 + q_5`. Achieving this, imagine at `k` iteration, we have:
 
 ```python
@@ -79,8 +81,7 @@ Combine the first case and `k` iteration, we have the algorithm.
 
 ### Complexity Analysis
 
-We produce 1 *ugly number* in each iteration, so clearly `time complexity` is
-`O(n)`.
+- Time complexity: `O(n)`, as we produce 1 *ugly number* in each iteration
 
-Note that we remove 1 element but push 3 element in each iteration. So our
-`space complexity` would be `O(2n)` = `O(n)`.
+- Space complexity: `O(n)`, as we remove 1 element but push 3 element in each
+  iteration. So the space will be occupied by `2n`.
