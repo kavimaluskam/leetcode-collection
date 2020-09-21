@@ -50,8 +50,9 @@ insert the level scanning to the beginning of result.
 
 ### Solution
 
-A simple BFS basically solves the problem. And we each level's result to the
-beginning of result but not reordering it, to give a better time performance.
+A simple BFS basically solves the problem. And we add each level's result to the
+beginning of final result instead of reordering it,
+for a better time performance.
 
 ### Complexity Analysis
 
