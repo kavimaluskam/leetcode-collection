@@ -81,6 +81,9 @@ Day 7: [0, 0, 1, 1, 0, 0, 0, 0]</span>
 
 ## Discussion
 
+The problems requires us to update a list based on the current values (state)
+and a given logic rule, and evaluate the result after `N` iterations.
+
 Let's start with the naive approach. Consider give integer `N`, we perform the
 list update logic for `N` time, we will have the result in `O(n) time`. Simple.
 
@@ -88,17 +91,25 @@ To escape from the `O(n)`, our only hope is any looping pattern in this problem.
 Detecting this, we cache the result into a list / map, and check if the latest
 list exist in cache.
 
+### Solution
+
+Our solution iterates towards `N`, performing update to the list in each
+iteration. And to search for repeat patterns, we cache the historical
+records for the rows in [List](./submission.py3) or [Hash Map](./submission_dict.py3),
+and search for the updated rows to see if duplication can be found.
+
 Once we found a looping pattern, we can return the result from cache give days
 = `(N - current day) % period + pattern start day`.
 
 Well but if there's no looping pattern, we are doomed with `O(n)` being the best
 time complexity.
 
+Clearly Hash Map cache gives a solution with better time complexity,
+but when the pattern's period is small, list cache gives a faster solution
+as the list-to-string conversion is omitted.
+
 ### Complexity Analysis
 
-If no pattern exist, we shall stick with the naive approach. Giving
-`time complexity` being `O(n)`, `space complexity` being `O(1)`.
+- Time complexity: `O(k)` if pattern with period `k` exists. Else `O(n)`.
 
-If pattern exist, let's say pattern with period `k`, we have
-`time Complexity` being `O(2k) = O(k)`, when we use map as the cache,
-with `space complexity` being `O(k)`.
+- Space complexity: `O(k)` if pattern with period `k` exists. Else `O(n)`.
