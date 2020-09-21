@@ -105,7 +105,7 @@ of the input grid is always necessary.
 
 ### Complexity Analysis
 
-- Time Complexity: `O(n * 4l)`, as similar to [Trial 1](./submission_v0.py3),
+- Time Complexity: `O(3^n)`, as similar to [Trial 1](./submission_v0.py3),
   the worst case consists of searching for all elements in the grid,
   with each search continues with all possible elements, which is `4 ^ l`.
 

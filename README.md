@@ -30,6 +30,7 @@ Personal leetcode challenge/documentation with
 | 766 | [Flatten a Multilevel Doubly Linked List](766_flatten-a-multilevel-doubly-linked-list) | Linked List, Depth-first Search | Medium |
 | 813 | [All Paths From Source to Target](./813_all-paths-from-source-to-target) |  | Medium |
 | 994 | [Prison Cells After N Days](994_prison-cells-after-n-days) | Hash Table | Medium |
+| 1022 | [Unique Paths III](./1022_unique-paths-iii) | Backtracking, Depth-first Search | Hard |
 | 1446| [Angle Between Hands of a Clock](1446_angle-between-hands-of-a-clock) | Math | Medium |
 | 1465 | [Maximum Product of Splitted Binary Tree](1465_maximum-product-of-splitted-binary-tree) | Dynamic Programming, Tree, Depth-first Search | Medium |
 | 1538 | [Maximum Points You Can Obtain from Cards](./1538_maximum-points-you-can-obtain-from-cards) | Array, Dynamic Programming, Sliding Window | Medium |
