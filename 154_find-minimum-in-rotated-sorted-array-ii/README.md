@@ -45,3 +45,18 @@
 	<li>Would allow duplicates affect the run-time complexity? How and why?</li>
 </ul>
 
+## Discussion
+
+The problem provides an array sorted in ascending order and
+rotated at some pivot unknown. We have to find the minimum value of it.
+
+A very straight forward solution for this problem would be a direct iteration
+and check if any element smaller than the first element is spotted. Then we can
+locate the minimum value in `O(n)` time.
+
+### Trial 1
+
+[Trial 1](./submission_v0.py) gives a straight forward solution by linear
+iteration. Since the input is sorted, we just iterate and search for element
+smaller than the starting value, and return it. Otherwise we return the default
+starting value
