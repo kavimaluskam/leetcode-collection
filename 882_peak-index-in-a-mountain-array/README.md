@@ -65,7 +65,7 @@ Instead of simply iterate the input and find the peak value,
 we aim to perform better with binary search approach.
 
 With a common binary search setup, we compare the `mid` value in
-each iteration. If the `mid` value is in *upper-peak*, we search
+each iteration. If the `mid` value is in *rising-side*, we search
 in the later part of the array, else search in the beginning part.
 
 ### Solution
@@ -74,7 +74,7 @@ We begin with a common binary search setup: initializing `head` and `tail`,
 and try to evaluate and the median value, and update the search area in each
 iteration, until `head` and `tail` come across each other.
 
-When `mid` is smaller than the next value, it's clear in the `upper-peak`, and
+When `mid` is smaller than the next value, it's clear in the *rising-side*, and
 we search in the later part of the array. Else, we search in the beginning part
 of the array.
 
