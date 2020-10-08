@@ -30,6 +30,7 @@ Personal leetcode challenge/documentation with
 | 662| [Maximum Width of Binary Tree](662_maximum-width-of-binary-tree) | Tree | Medium |
 | 766 | [Flatten a Multilevel Doubly Linked List](766_flatten-a-multilevel-doubly-linked-list) | Linked List, Depth-first Search | Medium |
 | 813 | [All Paths From Source to Target](./813_all-paths-from-source-to-target) |  | Medium |
+| 882 | [Peak Index in a Mountain Array](./882_peak-index-in-a-mountain-array) | Binary Search | Easy |
 | 994 | [Prison Cells After N Days](994_prison-cells-after-n-days) | Hash Table | Medium |
 | 1022 | [Unique Paths III](./1022_unique-paths-iii) | Backtracking, Depth-first Search | Hard |
 | 1446| [Angle Between Hands of a Clock](1446_angle-between-hands-of-a-clock) | Math | Medium |
