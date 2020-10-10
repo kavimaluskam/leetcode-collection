@@ -3,7 +3,7 @@ id: "852"
 title: "Peak Index in a Mountain Array"
 url: "https://leetcode.com/problems/peak-index-in-a-mountain-array/description/"
 tags:
-- `binary-search`
+- "binary-search"
 difficulty: Easy
 acceptance: 71.8%
 total-accepted: "181811"

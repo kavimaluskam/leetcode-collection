@@ -3,8 +3,8 @@ id: "67"
 title: "Add Binary"
 url: "https://leetcode.com/problems/add-binary/description/"
 tags:
-- `math`
-- `string`
+- "math"
+- "string"
 difficulty: Easy
 acceptance: 45.9%
 total-accepted: "515825"

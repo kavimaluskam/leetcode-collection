@@ -3,7 +3,7 @@ id: "1344"
 title: "Angle Between Hands of a Clock"
 url: "https://leetcode.com/problems/angle-between-hands-of-a-clock/description/"
 tags:
-- `math`
+- "math"
 difficulty: Medium
 acceptance: 61.3%
 total-accepted: "44427"

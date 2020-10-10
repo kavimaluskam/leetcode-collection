@@ -3,8 +3,8 @@ id: "2"
 title: "Add Two Numbers"
 url: "https://leetcode.com/problems/add-two-numbers/description/"
 tags:
-- `linked-list`
-- `math`
+- "linked-list"
+- "math"
 difficulty: Medium
 acceptance: 34.3%
 total-accepted: "1579094"

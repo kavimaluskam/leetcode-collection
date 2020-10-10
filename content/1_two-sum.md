@@ -3,12 +3,12 @@ id: "1"
 title: "Two Sum"
 url: "https://leetcode.com/problems/two-sum/description/"
 tags:
-- `Array`
-- `Hash Table`
+- "array"
+- "hash-table"
 difficulty: Easy
 acceptance: 45.9%
-total-accepted: "3397681"
-total-submissions: "7405302"
+total-accepted: "3399241"
+total-submissions: "7408324"
 testcase-example: "[2,7,11,15]\n9"
 ---
 

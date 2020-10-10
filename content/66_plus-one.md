@@ -3,7 +3,7 @@ id: "66"
 title: "Plus One"
 url: "https://leetcode.com/problems/plus-one/description/"
 tags:
-- `array`
+- "array"
 difficulty: Easy
 acceptance: 43.0%
 total-accepted: "701438"

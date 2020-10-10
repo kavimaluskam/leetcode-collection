@@ -3,9 +3,9 @@ id: "106"
 title: "Construct Binary Tree from Inorder and Postorder Traversal"
 url: "https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/description/"
 tags:
-- `array`
-- `tree`
-- `depth-first-search`
+- "array"
+- "tree"
+- "depth-first-search"
 difficulty: Medium
 acceptance: 48.1%
 total-accepted: "257436"

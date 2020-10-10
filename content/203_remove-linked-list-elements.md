@@ -3,7 +3,7 @@ id: "203"
 title: "Remove Linked List Elements"
 url: "https://leetcode.com/problems/remove-linked-list-elements/description/"
 tags:
-- `linked-list`
+- "linked-list"
 difficulty: Easy
 acceptance: 38.9%
 total-accepted: "390695"

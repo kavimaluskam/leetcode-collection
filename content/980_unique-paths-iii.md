@@ -3,8 +3,8 @@ id: "980"
 title: "Unique Paths III"
 url: "https://leetcode.com/problems/unique-paths-iii/description/"
 tags:
-- `backtracking`
-- `depth-first-search`
+- "backtracking"
+- "depth-first-search"
 difficulty: Hard
 acceptance: 76.9%
 total-accepted: "56420"

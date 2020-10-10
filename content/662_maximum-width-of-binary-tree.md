@@ -3,7 +3,7 @@ id: "662"
 title: "Maximum Width of Binary Tree"
 url: "https://leetcode.com/problems/maximum-width-of-binary-tree/description/"
 tags:
-- `tree`
+- "tree"
 difficulty: Medium
 acceptance: 40.4%
 total-accepted: "96881"
