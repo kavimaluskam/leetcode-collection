@@ -1,5 +1,5 @@
 ---
-id: "264"
+id: 264
 title: "Ugly Number II"
 url: "https://leetcode.com/problems/ugly-number-ii/description/"
 tags:

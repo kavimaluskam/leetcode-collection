@@ -1,5 +1,5 @@
 ---
-id: "797"
+id: 797
 title: "All Paths From Source to Target"
 url: "https://leetcode.com/problems/all-paths-from-source-to-target/description/"
 tags:

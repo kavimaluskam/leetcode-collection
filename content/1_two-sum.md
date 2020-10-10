@@ -1,5 +1,5 @@
 ---
-id: "1"
+id: 1
 title: "Two Sum"
 url: "https://leetcode.com/problems/two-sum/description/"
 tags:

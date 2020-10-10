@@ -1,5 +1,5 @@
 ---
-id: "1095"
+id: 1095
 title: "Find in Mountain Array"
 url: "https://leetcode.com/problems/find-in-mountain-array/description/"
 tags:

@@ -1,5 +1,5 @@
 ---
-id: "1344"
+id: 1344
 title: "Angle Between Hands of a Clock"
 url: "https://leetcode.com/problems/angle-between-hands-of-a-clock/description/"
 tags:

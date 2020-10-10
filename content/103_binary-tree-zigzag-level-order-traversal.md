@@ -1,5 +1,5 @@
 ---
-id: "103"
+id: 103
 title: "Binary Tree Zigzag Level Order Traversal"
 url: "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/description/"
 tags:

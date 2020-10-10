@@ -1,5 +1,5 @@
 ---
-id: "980"
+id: 980
 title: "Unique Paths III"
 url: "https://leetcode.com/problems/unique-paths-iii/description/"
 tags:

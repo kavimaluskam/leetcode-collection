@@ -1,5 +1,5 @@
 ---
-id: "430"
+id: 430
 title: "Flatten a Multilevel Doubly Linked List"
 url: "https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/description/"
 tags:

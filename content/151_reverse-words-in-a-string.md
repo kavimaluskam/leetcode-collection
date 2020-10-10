@@ -1,5 +1,5 @@
 ---
-id: "151"
+id: 151
 title: "Reverse Words in a String"
 url: "https://leetcode.com/problems/reverse-words-in-a-string/description/"
 tags:

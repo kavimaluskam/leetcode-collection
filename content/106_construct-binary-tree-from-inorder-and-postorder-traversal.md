@@ -1,5 +1,5 @@
 ---
-id: "106"
+id: 106
 title: "Construct Binary Tree from Inorder and Postorder Traversal"
 url: "https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/description/"
 tags:

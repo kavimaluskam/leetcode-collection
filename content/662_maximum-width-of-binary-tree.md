@@ -1,5 +1,5 @@
 ---
-id: "662"
+id: 662
 title: "Maximum Width of Binary Tree"
 url: "https://leetcode.com/problems/maximum-width-of-binary-tree/description/"
 tags:

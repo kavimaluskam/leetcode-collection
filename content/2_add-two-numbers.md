@@ -1,5 +1,5 @@
 ---
-id: "2"
+id: 2
 title: "Add Two Numbers"
 url: "https://leetcode.com/problems/add-two-numbers/description/"
 tags:

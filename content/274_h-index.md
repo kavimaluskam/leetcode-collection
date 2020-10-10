@@ -1,5 +1,5 @@
 ---
-id: "274"
+id: 274
 title: "H-Index"
 url: "https://leetcode.com/problems/h-index/description/"
 tags:

@@ -1,5 +1,5 @@
 ---
-id: "66"
+id: 66
 title: "Plus One"
 url: "https://leetcode.com/problems/plus-one/description/"
 tags:

@@ -1,5 +1,5 @@
 ---
-id: "79"
+id: 79
 title: "Word Search"
 url: "https://leetcode.com/problems/word-search/description/"
 tags:

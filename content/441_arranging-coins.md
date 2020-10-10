@@ -1,5 +1,5 @@
 ---
-id: "441"
+id: 441
 title: "Arranging Coins"
 url: "https://leetcode.com/problems/arranging-coins/description/"
 tags:

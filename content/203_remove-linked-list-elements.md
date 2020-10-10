@@ -1,5 +1,5 @@
 ---
-id: "203"
+id: 203
 title: "Remove Linked List Elements"
 url: "https://leetcode.com/problems/remove-linked-list-elements/description/"
 tags:

@@ -1,5 +1,5 @@
 ---
-id: "100"
+id: 100
 title: "Same Tree"
 url: "https://leetcode.com/problems/same-tree/description/"
 tags:

@@ -1,5 +1,5 @@
 ---
-id: "78"
+id: 78
 title: "Subsets"
 url: "https://leetcode.com/problems/subsets/description/"
 tags:

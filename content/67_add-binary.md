@@ -1,5 +1,5 @@
 ---
-id: "67"
+id: 67
 title: "Add Binary"
 url: "https://leetcode.com/problems/add-binary/description/"
 tags:

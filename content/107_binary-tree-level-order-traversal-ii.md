@@ -1,5 +1,5 @@
 ---
-id: "107"
+id: 107
 title: "Binary Tree Level Order Traversal II"
 url: "https://leetcode.com/problems/binary-tree-level-order-traversal-ii/description/"
 tags:

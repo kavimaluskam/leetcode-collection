@@ -1,5 +1,5 @@
 ---
-id: "1423"
+id: 1423
 title: "Maximum Points You Can Obtain from Cards"
 url: "https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/description/"
 tags:
