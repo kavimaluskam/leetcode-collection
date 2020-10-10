@@ -3,8 +3,8 @@ id: "274"
 title: "H-Index"
 url: "https://leetcode.com/problems/h-index/description/"
 tags:
-- `Hash Table`
-- `Sort`
+- `hash-table`
+- `sort`
 difficulty: Medium
 acceptance: 36.3%
 total-accepted: "189165"

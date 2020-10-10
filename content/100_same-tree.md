@@ -3,8 +3,8 @@ id: "100"
 title: "Same Tree"
 url: "https://leetcode.com/problems/same-tree/description/"
 tags:
-- `Tree`
-- `Depth-first Search`
+- `tree`
+- `depth-first-search`
 difficulty: Easy
 acceptance: 53.7%
 total-accepted: "619870"

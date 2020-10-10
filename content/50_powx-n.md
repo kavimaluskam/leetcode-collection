@@ -3,8 +3,8 @@ id: "50"
 title: "Pow(x, n)"
 url: "https://leetcode.com/problems/powx-n/description/"
 tags:
-- `Math`
-- `Binary Search`
+- `math`
+- `binary-search`
 difficulty: Medium
 acceptance: 30.5%
 total-accepted: "538442"

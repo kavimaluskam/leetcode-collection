@@ -3,9 +3,9 @@ id: "264"
 title: "Ugly Number II"
 url: "https://leetcode.com/problems/ugly-number-ii/description/"
 tags:
-- `Math`
-- `Dynamic Programming`
-- `Heap`
+- `math`
+- `dynamic-programming`
+- `heap`
 difficulty: Medium
 acceptance: 42.3%
 total-accepted: "187544"

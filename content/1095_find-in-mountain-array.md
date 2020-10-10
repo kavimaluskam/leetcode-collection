@@ -3,7 +3,7 @@ id: "1095"
 title: "Find in Mountain Array"
 url: "https://leetcode.com/problems/find-in-mountain-array/description/"
 tags:
-- `Binary Search`
+- `binary-search`
 difficulty: Hard
 acceptance: 36.0%
 total-accepted: "17497"

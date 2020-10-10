@@ -3,8 +3,8 @@ id: "430"
 title: "Flatten a Multilevel Doubly Linked List"
 url: "https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/description/"
 tags:
-- `Linked List`
-- `Depth-first Search`
+- `linked-list`
+- `depth-first-search`
 difficulty: Medium
 acceptance: 55.9%
 total-accepted: "126028"

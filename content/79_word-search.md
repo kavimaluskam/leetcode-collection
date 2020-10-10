@@ -3,8 +3,8 @@ id: "79"
 title: "Word Search"
 url: "https://leetcode.com/problems/word-search/description/"
 tags:
-- `Array`
-- `Backtracking`
+- `array`
+- `backtracking`
 difficulty: Medium
 acceptance: 36.0%
 total-accepted: "542309"

@@ -3,7 +3,7 @@ id: "151"
 title: "Reverse Words in a String"
 url: "https://leetcode.com/problems/reverse-words-in-a-string/description/"
 tags:
-- `String`
+- `string`
 difficulty: Medium
 acceptance: 22.5%
 total-accepted: "457832"

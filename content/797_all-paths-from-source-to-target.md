@@ -3,9 +3,9 @@ id: "797"
 title: "All Paths From Source to Target"
 url: "https://leetcode.com/problems/all-paths-from-source-to-target/description/"
 tags:
-- `Backtracking`
-- `Depth-first Search`
-- `Graph`
+- `backtracking`
+- `depth-first-search`
+- `graph`
 difficulty: Medium
 acceptance: 78.1%
 total-accepted: "91078"

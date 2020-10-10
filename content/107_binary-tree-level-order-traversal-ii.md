@@ -3,8 +3,8 @@ id: "107"
 title: "Binary Tree Level Order Traversal II"
 url: "https://leetcode.com/problems/binary-tree-level-order-traversal-ii/description/"
 tags:
-- `Tree`
-- `Breadth-first Search`
+- `tree`
+- `breadth-first-search`
 difficulty: Easy
 acceptance: 54.1%
 total-accepted: "376345"

@@ -3,9 +3,9 @@ id: "78"
 title: "Subsets"
 url: "https://leetcode.com/problems/subsets/description/"
 tags:
-- `Array`
-- `Backtracking`
-- `Bit Manipulation`
+- `array`
+- `backtracking`
+- `bit-manipulation`
 difficulty: Medium
 acceptance: 63.1%
 total-accepted: "645699"

@@ -3,7 +3,7 @@ id: "957"
 title: "Prison Cells After N Days"
 url: "https://leetcode.com/problems/prison-cells-after-n-days/description/"
 tags:
-- `Hash Table`
+- `hash-table`
 difficulty: Medium
 acceptance: 40.4%
 total-accepted: "101409"

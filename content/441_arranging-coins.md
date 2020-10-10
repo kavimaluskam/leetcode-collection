@@ -3,8 +3,8 @@ id: "441"
 title: "Arranging Coins"
 url: "https://leetcode.com/problems/arranging-coins/description/"
 tags:
-- `Math`
-- `Binary Search`
+- `math`
+- `binary-search`
 difficulty: Easy
 acceptance: 42.1%
 total-accepted: "171794"

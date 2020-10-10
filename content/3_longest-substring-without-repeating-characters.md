@@ -3,10 +3,10 @@ id: "3"
 title: "Longest Substring Without Repeating Characters"
 url: "https://leetcode.com/problems/longest-substring-without-repeating-characters/description/"
 tags:
-- `Hash Table`
-- `Two Pointers`
-- `String`
-- `Sliding Window`
+- `hash-table`
+- `two-pointers`
+- `string`
+- `sliding-window`
 difficulty: Medium
 acceptance: 30.7%
 total-accepted: "1757032"

@@ -3,9 +3,9 @@ id: "103"
 title: "Binary Tree Zigzag Level Order Traversal"
 url: "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/description/"
 tags:
-- `Stack`
-- `Tree`
-- `Breadth-first Search`
+- `stack`
+- `tree`
+- `breadth-first-search`
 difficulty: Medium
 acceptance: 48.9%
 total-accepted: "421565"
