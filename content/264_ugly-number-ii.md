@@ -1,22 +1,19 @@
-# [264] Ugly Number II
+---
+id: "264"
+title: "Ugly Number II"
+url: "https://leetcode.com/problems/ugly-number-ii/description/"
+tags:
+- `Math`
+- `Dynamic Programming`
+- `Heap`
+difficulty: Medium
+acceptance: 42.3%
+total-accepted: "187544"
+total-submissions: "443009"
+testcase-example: "10"
+---
 
-<https://leetcode.com/problems/ugly-number-ii/description/>
-
-- Tags: `Math`, `Dynamic Programming`, `Heap`
-
-- Diffculty: Medium
-
-- Source Code: [./submission.py3](./submission.py3)
-
-- Acceptance: 41.9%
-
-- Total Accepted: 176221
-
-- Total Submissions: 420633
-
-- Testcase Example: 10
-
-## Description
+## Problem
 
 <p>Write a program to find the <code>n</code>-th ugly number.</p>
 
@@ -69,7 +66,7 @@ q_5.append(u_k * 5)
 
 For the initiation, we skip the first complex cases, and setup for `k = 2`:
 
-```python
+```py3
 u_1 = 1
 
 q_2 = [2]
@@ -78,6 +75,38 @@ q_5 = [5]
 ```
 
 Combine the first case and `k` iteration, we have the algorithm.
+
+```py3
+class Solution:
+    def nthUglyNumber(self, n: int) -> int:
+        q2 = [2]
+        q3 = [3]
+        q5 = [5]
+
+        r = 1
+
+        i = 1
+
+        while i < n:
+            r = min(q2[0], q3[0], q5[0])
+
+            if r == q2[0]:
+                q2.pop(0)
+
+            if r == q3[0]:
+                q3.pop(0)
+
+            if r == q5[0]:
+                q5.pop(0)
+
+            q2.append(r * 2)
+            q3.append(r * 3)
+            q5.append(r * 5)
+
+            i += 1
+
+        return r
+```
 
 ### Complexity Analysis
 

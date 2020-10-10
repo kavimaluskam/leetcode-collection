@@ -1,22 +1,17 @@
-# [1446] Angle Between Hands of a Clock
+---
+id: "1344"
+title: "Angle Between Hands of a Clock"
+url: "https://leetcode.com/problems/angle-between-hands-of-a-clock/description/"
+tags:
+- `Math`
+difficulty: Medium
+acceptance: 61.3%
+total-accepted: "44427"
+total-submissions: "72466"
+testcase-example: "12\n30"
+---
 
-<https://leetcode.com/problems/angle-between-hands-of-a-clock/description/>
-
-- Tags: `Math`
-
-- Difficulty: Medium
-
-- Source Code: [./submission.py3](./submission.py3)
-
-- Acceptance: 62.0%
-
-- Total Accepted: 23881
-
-- Total Submissions: 38518
-
-- Testcase Example: 12\n30
-
-## Description
+## Problem
 
 <p>Given two numbers, <code>hour</code> and <code>minutes</code>. Return the smaller angle (in degrees) formed between the <code>hour</code> and the <code>minute</code> hand.</p>
 
@@ -92,6 +87,17 @@ We use `(hour % 12)` to prevent hours larger than 12.
 
 And we take `min(result, 360 - result)` as the final solution to prevent values
 larger than 180.
+
+```py3
+class Solution:
+    def angleClock(self, hour: int, minutes: int) -> float:
+        deg_m = minutes * 6
+        deg_h = (hour % 12)* 30 + minutes * 0.5
+
+        result = abs(deg_h - deg_m)
+
+        return min(result, 360 - result)
+```
 
 ### Complexity Analysis
 

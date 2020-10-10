@@ -1,22 +1,18 @@
-# [79] Word Search
+---
+id: "79"
+title: "Word Search"
+url: "https://leetcode.com/problems/word-search/description/"
+tags:
+- `Array`
+- `Backtracking`
+difficulty: Medium
+acceptance: 36.0%
+total-accepted: "542309"
+total-submissions: "1505942"
+testcase-example: "[["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]]\n"ABCCED""
+---
 
-<https://leetcode.com/problems/word-search/description/>
-
-- Tags: `Array`, `Backtracking`
-
-- Diffculty: Medium
-
-- Source Code: [./submission.py3](./submission.py3)
-
-- Acceptance: 35.0%
-
-- Total Accepted: 476437
-
-- Total Submissions: 1359950
-
-- Testcase Example: [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]]\n"ABCCED"
-
-## Description
+## Problem
 
 <p>Given a 2D board and a word, find if the word exists in the grid.</p>
 
@@ -92,6 +88,47 @@ As recursion and caching of visited elements in the grid is involved.
 For the worst case, recursion holding up for each characters in the input word,
 and each recursion caches visited element with size at most `l`.
 
+```py3
+class Solution:
+    def exist(self, board, word):
+        self.len_y, self.len_x, self.len_w = len(board), len(board[0]), len(word)
+        self.board, self.word = board, word
+
+        y, x, w = 0, 0, 0
+
+        while y < self.len_y and x < self.len_x:
+            if self.search(x, y, w, []):
+                return True
+
+            if x == self.len_x - 1:
+                y, x = y + 1, 0
+            else:
+                x = x + 1
+
+        return False
+
+    def search(self, x, y, w, cache):
+        if (y, x) in cache:
+            return False
+
+        if x < 0 or x >= self.len_x:
+            return False
+
+        if y < 0 or y >= self.len_y:
+            return False
+
+        if self.board[y][x] != self.word[w]:
+            return False
+
+        if w == self.len_w - 1:
+            return True
+
+        return self.search(x + 1, y, w + 1, cache + [(y, x)]) \
+            or self.search(x, y + 1, w + 1, cache + [(y, x)]) \
+            or self.search(x - 1, y, w + 1, cache + [(y, x)]) \
+            or self.search(x, y - 1, w + 1, cache + [(y, x)])
+```
+
 ### Solution
 
 [The final solution](./submission.py3) improves *trial 1* by removing the
@@ -102,6 +139,50 @@ And we reset it with the original value once searching is completed.
 
 Hence we don't have to handle the cache with extra space, while the memory
 of the input grid is always necessary.
+
+```py3
+class Solution:
+    def exist(self, board, word):
+        self.len_y, self.len_x, self.len_w = len(board), len(board[0]), len(word)
+        self.board, self.word = board, word
+
+        y, x, w = 0, 0, 0
+
+        while y < self.len_y and x < self.len_x:
+            if self.search(x, y, w):
+                return True
+
+            if x == self.len_x - 1:
+                y, x = y + 1, 0
+            else:
+                x = x + 1
+
+        return False
+
+    def search(self, x, y, w):
+        if x < 0 or x >= self.len_x:
+            return False
+
+        if y < 0 or y >= self.len_y:
+            return False
+
+        if self.board[y][x] != self.word[w]:
+            return False
+
+        if w == self.len_w - 1:
+            return True
+
+        cache, self.board[y][x] = self.board[y][x], ''
+
+        res = self.search(x + 1, y, w + 1) \
+            or self.search(x, y + 1, w + 1) \
+            or self.search(x - 1, y, w + 1) \
+            or self.search(x, y - 1, w + 1)
+
+        self.board[y][x] = cache
+
+        return res
+```
 
 ### Complexity Analysis
 

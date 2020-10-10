@@ -1,22 +1,18 @@
-# [100] Same Tree
+---
+id: "100"
+title: "Same Tree"
+url: "https://leetcode.com/problems/same-tree/description/"
+tags:
+- `Tree`
+- `Depth-first Search`
+difficulty: Easy
+acceptance: 53.7%
+total-accepted: "619870"
+total-submissions: "1155244"
+testcase-example: "[1,2,3]\n[1,2,3]"
+---
 
-<https://leetcode.com/problems/same-tree/description/>
-
-- Tags: `Tree`, `Depth-first Search`
-
-- Difficulty: Easy
-
-- Source Code: [./submission.py3](./submission.py3)
-
-- Acceptance: 52.7%
-
-- Total Accepted: 550536
-
-- Total Submissions: 1044101
-
-- Testcase Example: [1,2,3]\n[1,2,3]
-
-## Description
+## Problem
 
 <p>Given two binary trees, write a function to check if they are the same or not.</p>
 
@@ -68,6 +64,29 @@ pointing out difference when spotted.
 A simple DFS algorithm on both tree would works.
 Note that after we compare the value for both nodes, passing child node to
 recursion is sufficient enough for scanning.
+
+```py3
+# Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+class Solution:
+    def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
+
+        if not p and not q:
+            return True
+
+        if not p or not q:
+            return False
+
+        if p.val != q.val:
+            return False
+
+        return self.isSameTree(p.right, q.right) and \
+            self.isSameTree(p.left, q.left)
+```
 
 ### Complexity Analysis
 

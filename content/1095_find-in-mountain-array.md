@@ -1,22 +1,17 @@
-# [1185] Find in Mountain Array
+---
+id: "1095"
+title: "Find in Mountain Array"
+url: "https://leetcode.com/problems/find-in-mountain-array/description/"
+tags:
+- `Binary Search`
+difficulty: Hard
+acceptance: 36.0%
+total-accepted: "17497"
+total-submissions: "48563"
+testcase-example: "[1,2,3,4,5,3,1]\n3"
+---
 
-<https://leetcode.com/problems/find-in-mountain-array/description/>
-
-- Tags: `Binary Search`
-
-- Difficulty: Hard
-
-- Source Code: [./submission.py3](./submission.py3)
-
-- Acceptance: 36.0%
-
-- Total Accepted: 17455
-
-- Total Submissions: 48428
-
-- Testcase Example: [1,2,3,4,5,3,1]\n3
-
-## Description
+## Problem
 
 <p><em>(This problem is an&nbsp;<strong>interactive problem</strong>.)</em></p>
 
@@ -73,7 +68,7 @@
 
 ## Discussion
 
-A complex version of [882. Peak Index in a Mountain Array](../882_peak-index-in-a-mountain-array).
+A complex version of [852. Peak Index in a Mountain Array](./852_peak-index-in-a-mountain-array).
 We have to locate the target value from a given mountain array.
 
 In order to perform binary search, we first find the peak index in the input.
@@ -84,11 +79,68 @@ of the input.
 
 We first find the peak index with a separate function
 `findPeakIndexInMountainArray`, which is exactly the implementation of
-[882. Peak Index in a Mountain Array](../882_peak-index-in-a-mountain-array).
+[852. Peak Index in a Mountain Array](./852_peak-index-in-a-mountain-array).
 
 Then we perform binary search on the *rising-side* of the array, then the
 *falling-side*. Note that in each binary search, we have to check if the ending
 element is target, as it's missed in the binary search scanning process.
+
+```py3
+# """
+# This is MountainArray's API interface.
+# You should not implement it, or speculate about its implementation
+# """
+#class MountainArray:
+#    def get(self, index: int) -> int:
+#    def length(self) -> int:
+
+class Solution:
+    def findInMountainArray(self, target: int, mountain_arr: 'MountainArray') -> int:
+        # location peak
+        peak = self.findPeakIndexInMountainArray(mountain_arr)
+
+        # searching in the rising side
+        head, tail = 0, peak
+
+        while head < tail:
+            mid = (head + tail) // 2
+            if mountain_arr.get(mid) == target:
+                return mid
+            elif mountain_arr.get(mid) < target:
+                head = mid + 1
+            else:
+                tail = mid
+        if mountain_arr.get(tail) == target:
+            return tail
+
+        # searching in the falling side
+        head, tail = peak, mountain_arr.length() - 1
+
+        while head < tail:
+            mid = (head + tail) // 2
+            if mountain_arr.get(mid) == target:
+                return mid
+            elif mountain_arr.get(mid) > target:
+                head = mid + 1
+            else:
+                tail = mid
+        if mountain_arr.get(tail) == target:
+            return tail
+
+        return -1
+
+
+    def findPeakIndexInMountainArray(self, mountain_arr: 'MountainArray') -> int:
+        head, tail = 0, mountain_arr.length() - 1
+
+        while head < tail:
+            mid = (head + tail) // 2
+            if mountain_arr.get(mid) < mountain_arr.get(mid + 1):
+                head = mid + 1
+            else:
+                tail = mid
+        return head
+```
 
 ### Complexity Analysis
 

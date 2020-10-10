@@ -1,22 +1,18 @@
-# [1022] Unique Paths III
+---
+id: "980"
+title: "Unique Paths III"
+url: "https://leetcode.com/problems/unique-paths-iii/description/"
+tags:
+- `Backtracking`
+- `Depth-first Search`
+difficulty: Hard
+acceptance: 76.9%
+total-accepted: "56420"
+total-submissions: "73323"
+testcase-example: "[[1,0,0,0],[0,0,0,0],[0,0,2,-1]]"
+---
 
-<https://leetcode.com/problems/unique-paths-iii/description/>
-
-- Tags: `Backtracking`, `Depth-first Search`
-
-- Difficulty: Hard
-
-- Source Code: [./submission.py3](./submission.py3)
-
-- Acceptance: 76.6%
-
-- Total Accepted: 52010
-
-- Total Submissions: 67904
-
-- Testcase Example: [[1,0,0,0],[0,0,0,0],[0,0,2,-1]]
-
-## Description
+## Problem
 
 <p>On a 2-dimensional&nbsp;<code>grid</code>, there are 4 types of squares:</p>
 
@@ -103,6 +99,54 @@ Besides we maintain a variable `step` to see how many `0` or `1` is visited.
 When we reach `2`, we check the value of `step` to see if all `0`
 are being passed through exactly once. Then we update our result number if
 a new unique path is founded.
+
+```py3
+from typing import List
+
+class Solution:
+    def uniquePathsIII(self, grid: List[List[int]]) -> int:
+        self.grid = grid
+        self.result = 0
+        self.number_of_zero = 0
+
+        for i in range(len(grid)):
+            for j in range(len(grid[i])):
+                if grid[i][j] == 0:
+                    self.number_of_zero += 1
+
+        for i in range(len(grid)):
+            for j in range(len(grid[i])):
+                if grid[i][j] == 1:
+                    self.dfs(i, j, 0)
+        return self.result
+
+
+    def dfs(self, i, j, step):
+        if self.grid[i][j] == 2:
+            if step == self.number_of_zero + 1:
+                self.result += 1
+            return
+
+
+        if self.grid[i][j] in (0, 1):
+            temp, self.grid[i][j] = self.grid[i][j], 999
+
+            if i > 0:
+                self.dfs(i - 1, j, step + 1)
+
+            if j > 0:
+                self.dfs(i, j - 1, step + 1)
+
+            if i < len(self.grid) - 1:
+                self.dfs(i + 1, j, step + 1)
+
+            if j < len(self.grid[0]) - 1:
+                self.dfs(i, j + 1, step + 1)
+
+            self.grid[i][j] = temp
+
+        return
+```
 
 ### Complexity Analysis
 

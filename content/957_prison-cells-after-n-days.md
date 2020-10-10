@@ -1,22 +1,17 @@
-# [994] Prison Cells After N Days
+---
+id: "957"
+title: "Prison Cells After N Days"
+url: "https://leetcode.com/problems/prison-cells-after-n-days/description/"
+tags:
+- `Hash Table`
+difficulty: Medium
+acceptance: 40.4%
+total-accepted: "101409"
+total-submissions: "251106"
+testcase-example: "[0,1,0,1,1,0,0,1]\n7"
+---
 
-<https://leetcode.com/problems/prison-cells-after-n-days/description/>
-
-- Tags: `Hash Table`
-
-- Diffculty: Medium
-
-- Source Code: [./submission.py3](./submission.py3)
-
-- Acceptance: 41.1%
-
-- Total Accepted: 88590
-
-- Total Submissions: 215450
-
-- Testcase Example: [0,1,0,1,1,0,0,1]\n7
-
-## Description
+## Problem
 
 <p>There are 8 prison cells in a row, and each cell is either occupied or vacant.</p>
 
@@ -94,9 +89,9 @@ list exist in cache.
 ### Solution
 
 Our solution iterates towards `N`, performing update to the list in each
-iteration. And to search for repeat patterns, we cache the historical
-records for the rows in [List](./submission.py3) or [Hash Map](./submission_dict.py3),
-and search for the updated rows to see if duplication can be found.
+iteration. And to search for repeat patterns, we cache the historical records
+for the rows in Hash Map, and search for the updated rows to see if duplication
+can be found.
 
 Once we found a looping pattern, we can return the result from cache give days
 = `(N - current day) % period + pattern start day`.
@@ -104,9 +99,37 @@ Once we found a looping pattern, we can return the result from cache give days
 Well but if there's no looping pattern, we are doomed with `O(n)` being the best
 time complexity.
 
-Clearly Hash Map cache gives a solution with better time complexity,
-but when the pattern's period is small, list cache gives a faster solution
-as the list-to-string conversion is omitted.
+```py3
+from typing import List
+
+class Solution:
+    def prisonAfterNDays(self, cells: List[int], N: int) -> List[int]:
+        i = 0
+        cache = {
+            ','.join(str(x) for x in cells): i
+        }
+        pre = cells
+
+        while i < N:
+            i += 1
+            new = [0,0,0,0,0,0,0,0]
+
+            for j in range(1,7):
+                if pre[j - 1] == pre[j + 1]:
+                    new[j] = 1
+
+            if ','.join(str(x) for x in new) in cache:
+                j = cache.get(','.join(str(x) for x in new))
+                period = i - j
+                for snap, day in cache.items():
+                    if day == j + (N - i) % period:
+                        return [int(x) for x in snap.split(',')]
+
+            cache[','.join(str(x) for x in new)] = i
+            pre = new
+
+        return new
+```
 
 ### Complexity Analysis
 

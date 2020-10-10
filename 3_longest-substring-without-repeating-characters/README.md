@@ -51,7 +51,7 @@
 </div>
 </div>
 
-## Discussions
+## Discussion
 
 ### Trial 1
 

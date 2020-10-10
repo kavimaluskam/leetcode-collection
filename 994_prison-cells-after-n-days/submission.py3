@@ -4,11 +4,10 @@ class Solution:
     def prisonAfterNDays(self, cells: List[int], N: int) -> List[int]:
         cache = [cells]
         i = 0
+        pre = cells
 
         while i < N:
-            pre = cache[i]
             i += 1
-
             new = [0,0,0,0,0,0,0,0]
 
             for j in range(1,7):

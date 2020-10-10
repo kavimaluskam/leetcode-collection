@@ -82,7 +82,7 @@ after complete.
 
 ### Complexity Analysis
 
-- Time complexity: `O(n)`, scanning the string into words,
+- Time Complexity: `O(n)`, scanning the string into words,
   and perform reverse with  two pointers along the array.
 
-- Space complexity: `O(n)`, as we have to put the word array in memory.
+- Space Complexity: `O(n)`, as we have to put the word array in memory.

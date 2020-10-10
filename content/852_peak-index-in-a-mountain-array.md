@@ -1,22 +1,17 @@
-# [882] Peak Index in a Mountain Array
+---
+id: "852"
+title: "Peak Index in a Mountain Array"
+url: "https://leetcode.com/problems/peak-index-in-a-mountain-array/description/"
+tags:
+- `Binary Search`
+difficulty: Easy
+acceptance: 71.8%
+total-accepted: "181811"
+total-submissions: "253341"
+testcase-example: "[0,1,0]"
+---
 
-<https://leetcode.com/problems/peak-index-in-a-mountain-array/description/>
-
-- Tags: `Binary Search`
-
-- Difficulty: Easy
-
-- Source Code: [./submission.py3](./submission.py3)
-
-- Acceptance: 71.8%
-
-- Total Accepted: 181540
-
-- Total Submissions: 252996
-
-- Testcase Example: [0,1,0]
-
-## Description
+## Problem
 
 <p>Let&#39;s call an array <code>arr</code> a <strong>mountain</strong>&nbsp;if the following properties hold:</p>
 
@@ -77,6 +72,23 @@ iteration, until `head` and `tail` come across each other.
 When `mid` is smaller than the next value, it's clear in the *rising-side*, and
 we search in the later part of the array. Else, we search in the beginning part
 of the array.
+
+```py3
+from typing import List
+
+class Solution:
+    def peakIndexInMountainArray(self, arr: List[int]) -> int:
+        head, tail = 0, len(arr) - 1
+
+        while head < tail:
+            mid = (head + tail) // 2
+            if arr[mid] < arr[mid + 1]:
+                head = mid + 1
+            else:
+                tail = mid
+
+        return head
+```
 
 ### Complexity Analysis
 

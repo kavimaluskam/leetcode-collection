@@ -1,22 +1,19 @@
-# [106] Construct Binary Tree from Inorder and Postorder Traversal
+---
+id: "106"
+title: "Construct Binary Tree from Inorder and Postorder Traversal"
+url: "https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/description/"
+tags:
+- `Array`
+- `Tree`
+- `Depth-first Search`
+difficulty: Medium
+acceptance: 48.1%
+total-accepted: "257436"
+total-submissions: "535469"
+testcase-example: "[9,3,15,20,7]\n[9,15,7,20,3]"
+---
 
-<https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/description/>
-
-- Tags: `Array`, `Tree`, `Depth-first Search`
-
-- Diffculty: Medium
-
-- Source Code: [./submission.py3](./submission.py3)
-
-- Acceptance: 46.1%
-
-- Total Accepted: 229543
-
-- Total Submissions: 497651
-
-- Testcase Example: [9,3,15,20,7]\n[9,15,7,20,3]
-
-## Description
+## Problem
 
 <p>Given inorder and postorder traversal of a tree, construct the binary tree.</p>
 
@@ -93,6 +90,46 @@ recursively and pass the trimmed left traversals and right traversals to the
 next level. Here the order of recursion is at most `n`,
 and traversals' length is also limited at `n`.
 
+```py3
+from typing import List
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+
+class Solution:
+    def buildTree(self, inorder, postorder):
+        if not inorder:
+            return
+
+        root_value = postorder[-1]
+        root_node = TreeNode(root_value)
+
+        if len(inorder) == 1:
+            return root_node
+
+        break_ptr = -1
+
+        for i in range(len(inorder)):
+            if inorder[i] == root_value:
+                break_ptr = i
+
+        root_node.left = self.buildTree(
+            inorder=inorder[:break_ptr],
+            postorder=postorder[:break_ptr]
+        )
+
+        root_node.right = self.buildTree(
+            inorder=inorder[break_ptr+1:],
+            postorder=postorder[break_ptr:-1]
+        )
+
+        return root_node
+```
+
 ### Solution
 
 [The final solution](./submission.py3) improves *trial 1* by caching the
@@ -100,6 +137,60 @@ master in-order traversal as dictionary globally, and the construction function
 pass index instead of the whole sub-traversals to the next level. Hence the
 iteration at each recursive iteration is improved to a `O(1)` selection, and
 the space complexity is also improved.
+
+```py3
+from typing import List
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+
+class Solution:
+    def buildTree(self, inorder, postorder):
+        self.postorder = postorder
+        self.inorder_cache = {
+            inorder[i]:i
+            for i in range(len(inorder))
+        }
+
+        return self.build_tree_by_index(
+            in_start=0,
+            in_end=len(inorder) - 1,
+            post_start=0,
+            post_end=len(postorder) - 1,
+        )
+
+    def build_tree_by_index(self, in_start, in_end, post_start, post_end):
+        if in_start > in_end or post_start > post_end:
+            return None
+
+        root_value = self.postorder[post_end]
+        root_node = TreeNode(root_value)
+
+        if in_end == in_start:
+            return root_node
+
+        root_inorder_index = self.inorder_cache[root_value]
+
+        root_node.left = self.build_tree_by_index(
+            in_start=in_start,
+            in_end=root_inorder_index - 1,
+            post_start=post_start,
+            post_end=post_start + (root_inorder_index - 1 - in_start),
+        )
+
+        root_node.right = self.build_tree_by_index(
+            in_start=root_inorder_index + 1,
+            in_end=in_end,
+            post_start=post_start + (root_inorder_index - in_start),
+            post_end=post_end - 1,
+        )
+
+        return root_node
+```
 
 ### Complexity Analysis
 
