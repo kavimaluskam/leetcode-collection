@@ -57,7 +57,7 @@ see if any enhancement can be made.
 
 ### Trial 1
 
-[Trial 1](./submission_v0.py3) gives a straight forward implementation based on
+*Trial 1* gives a straight forward implementation based on
 breaking down the in-order and post-order traversal.
 
 Considering the example input:
@@ -94,11 +94,11 @@ and traversals' length is also limited at `n`.
 from typing import List
 
 # Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
 
 class Solution:
     def buildTree(self, inorder, postorder):
@@ -132,7 +132,7 @@ class Solution:
 
 ### Solution
 
-[The final solution](./submission.py3) improves *trial 1* by caching the
+*The final solution* improves *Trial 1* by caching the
 master in-order traversal as dictionary globally, and the construction function
 pass index instead of the whole sub-traversals to the next level. Hence the
 iteration at each recursive iteration is improved to a `O(1)` selection, and

@@ -61,7 +61,7 @@ see if any enhancement can be made.
 
 ### Trial 1
 
-[Trial 1](./submission_v0.py3) gives a straight forward and naive solution.
+*Trial 1* gives a straight forward and naive solution.
 We try to scan through the elements in the input grid. And for each element,
 we search it with characters in the input word.
 
@@ -131,7 +131,7 @@ class Solution:
 
 ### Solution
 
-[The final solution](./submission.py3) improves *trial 1* by removing the
+*The final solution* improves *Trial 1* by removing the
 caching of visited elements. Instead we make use of the input grid.
 As grid becomes a stateful variable with respect to the searching, we mark the
 searched element in the input grid with some special character like `@` or `''`.

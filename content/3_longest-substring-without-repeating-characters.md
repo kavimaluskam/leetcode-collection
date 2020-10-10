@@ -63,7 +63,7 @@ Notice that the answer must be a substring, &quot;pwke&quot; is a subsequence an
 
 ### Trial 1
 
-[Trial 1](./submission_v0.py3) gives a rather naive approach.
+*Trial 1* gives a rather naive approach.
 We loop through characters in input string to search for the longest substring,
 and we use a hash map to save the characters for duplicate character detection.
 
@@ -93,7 +93,7 @@ class Solution:
 
 ### Trial 2
 
-[Trial 2](./submission_v1.py3) improves *trial 1* with a starting pointer.
+*Trial 2* improves *Trial 1* with a starting pointer.
 Again we loop through characters in input string to search fir the
 longest substring, with a hash map saving the characters.
 Besides we have a starting pointer to track the start of the substring,
@@ -128,7 +128,7 @@ class Solution:
 
 ### Solution
 
-[The final solution](./submission.py3) further improves *trial 2* by saving
+*The final solution* further improves *Trial 2* by saving
 the position of the character in the hash map. So when duplicated character is
 found, no removal in the hash map takes place. Instead we move the starting
 pointer to the position right after the duplicated character's latest position.

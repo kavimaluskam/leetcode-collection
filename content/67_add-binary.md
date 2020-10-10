@@ -41,14 +41,14 @@ testcase-example: ""11"\n"1""
 
 ## Discussion
 
-A problem very similar to [2. Add Two Numbers](../2_add-two-numbers):
+A problem very similar to [2. Add Two Numbers](./2_add-two-numbers.md):
 Mathematical addition for binary numbers in string. As the input date is
 in binary string format, i try to keep the data type and handle the addition
 by conditional cases.
 
 ### Solution
 
-Similar to [2. Add Two Numbers](../2_add-two-numbers), we have to handle:
+Similar to [2. Add Two Numbers](./2_add-two-numbers.md), we have to handle:
 
 1. When two numbers have different numbers of significant figures,
 

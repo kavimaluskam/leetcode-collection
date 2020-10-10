@@ -41,7 +41,7 @@ return its zigzag level order traversal as:<br />
 
 ## Discussion
 
-A problem very similar to [107. Binary Tree Level Order Traversal II](./107_binary-tree-level-order-traversal-ii).
+A problem very similar to [107. Binary Tree Level Order Traversal II](./107_binary-tree-level-order-traversal-ii.md).
 While handling is needed for the zigzag level order.
 
 For tree problems require operations on each level, we use BFS.

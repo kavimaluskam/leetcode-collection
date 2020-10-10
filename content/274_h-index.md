@@ -46,7 +46,7 @@ Then searching in the hash list would be give the result.
 
 ### Trial 1
 
-[Trial 1](./submission_v0.py3) gives a straight forward solution based on
+*Trial 1* gives a straight forward solution based on
 sorting. Then we can iterate from the larger integer side. Check for the
 value the begins to be smaller than the iterate index and imply return it.
 
@@ -67,7 +67,7 @@ class Solution:
 
 ### Solution
 
-[The final solution](./submission.py3) gives a faster solution without sorting,
+*The final solution* gives a faster solution without sorting,
 and of course with larger space. First we setup a list of size `n` for saving
 the counts. Then we iterate through the input list and add the counts to the
 list. For values larger than `n` we just add the counts to `n` instead.

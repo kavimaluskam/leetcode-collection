@@ -55,7 +55,7 @@ testcase-example: "[2,7,11,15]\n9"
 
 ## Discussion
 
-### Trail 1
+### Trial 1
 
 One can easily see a trivial solution with brutal force. We loop through each
 element `x` in the list, and loop through each element again to check of
@@ -63,7 +63,7 @@ element `x` in the list, and loop through each element again to check of
 
 ### Trial 2
 
-Based on *trial 1*, we can enhance the solution by preparing a hash map
+Based on *Trial 1*, we can enhance the solution by preparing a hash map
 (`dict` in python). Hence we loop through each element `x` in the list, and
 check for element `target - x` in the hash map. As look up in hash map is
 atomic, the time complexity of the algorithm improved to `O(n)`. While the hash

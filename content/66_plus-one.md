@@ -53,7 +53,7 @@ testcase-example: "[1,2,3]"
 
 ## Discussion
 
-A problem very similar to [2. Add Two Numbers](../2_add-two-numbers):
+A problem very similar to [2. Add Two Numbers](./2_add-two-numbers.md):
 Mathematical addition for a integer with digits in list. As only `1` is being
 added to the integer, the algorithm is rather straight forward.
 
