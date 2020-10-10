@@ -9,7 +9,8 @@ difficulty: Medium
 acceptance: 34.3%
 total-accepted: "1579094"
 total-submissions: "4605932"
-testcase-example: "[2,4,3]\n[5,6,4]"
+testcase-example: |
+   [2,4,3]\n[5,6,4]
 ---
 
 ## Problem

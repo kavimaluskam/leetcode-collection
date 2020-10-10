@@ -10,7 +10,8 @@ difficulty: Medium
 acceptance: 48.1%
 total-accepted: "257436"
 total-submissions: "535469"
-testcase-example: "[9,3,15,20,7]\n[9,15,7,20,3]"
+testcase-example: |
+   [9,3,15,20,7]\n[9,15,7,20,3]
 ---
 
 ## Problem

@@ -9,7 +9,8 @@ difficulty: Easy
 acceptance: 53.7%
 total-accepted: "619870"
 total-submissions: "1155244"
-testcase-example: "[1,2,3]\n[1,2,3]"
+testcase-example: |
+   [1,2,3]\n[1,2,3]
 ---
 
 ## Problem

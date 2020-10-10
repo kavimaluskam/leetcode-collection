@@ -9,7 +9,8 @@ difficulty: Medium
 acceptance: 36.0%
 total-accepted: "542309"
 total-submissions: "1505942"
-testcase-example: "[["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]]\n"ABCCED""
+testcase-example: |
+  [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]]\n"ABCCED"
 ---
 
 ## Problem

@@ -9,7 +9,8 @@ difficulty: Medium
 acceptance: 55.9%
 total-accepted: "126028"
 total-submissions: "225540"
-testcase-example: "[1,2,3,4,5,6,null,null,null,7,8,9,10,null,null,11,12]"
+testcase-example: |
+   [1,2,3,4,5,6,null,null,null,7,8,9,10,null,null,11,12]
 ---
 
 ## Problem

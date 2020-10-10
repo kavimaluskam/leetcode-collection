@@ -8,7 +8,8 @@ difficulty: Medium
 acceptance: 22.5%
 total-accepted: "457832"
 total-submissions: "2038353"
-testcase-example: ""the sky is blue""
+testcase-example: |
+   "the sky is blue"
 ---
 
 ## Problem

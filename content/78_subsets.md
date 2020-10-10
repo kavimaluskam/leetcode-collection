@@ -10,7 +10,8 @@ difficulty: Medium
 acceptance: 63.1%
 total-accepted: "645699"
 total-submissions: "1023726"
-testcase-example: "[1,2,3]"
+testcase-example: |
+   [1,2,3]
 ---
 
 ## Problem

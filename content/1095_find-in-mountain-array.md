@@ -8,7 +8,8 @@ difficulty: Hard
 acceptance: 36.0%
 total-accepted: "17497"
 total-submissions: "48563"
-testcase-example: "[1,2,3,4,5,3,1]\n3"
+testcase-example: |
+  [1,2,3,4,5,3,1]\n3
 ---
 
 ## Problem

@@ -10,7 +10,8 @@ difficulty: Medium
 acceptance: 78.1%
 total-accepted: "91078"
 total-submissions: "116612"
-testcase-example: "[[1,2],[3],[3],[]]"
+testcase-example: |
+  [[1,2],[3],[3],[]]
 ---
 
 ## Problem

@@ -8,7 +8,8 @@ difficulty: Easy
 acceptance: 38.9%
 total-accepted: "390695"
 total-submissions: "1005510"
-testcase-example: "[1,2,6,3,4,5,6]\n6"
+testcase-example: |
+   [1,2,6,3,4,5,6]\n6
 ---
 
 ## Problem

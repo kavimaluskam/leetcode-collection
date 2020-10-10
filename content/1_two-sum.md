@@ -9,7 +9,8 @@ difficulty: Easy
 acceptance: 45.9%
 total-accepted: "3399241"
 total-submissions: "7408324"
-testcase-example: "[2,7,11,15]\n9"
+testcase-example: |
+  [2,7,11,15]\n9
 ---
 
 ## Problem

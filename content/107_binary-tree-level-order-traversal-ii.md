@@ -9,7 +9,8 @@ difficulty: Easy
 acceptance: 54.1%
 total-accepted: "376345"
 total-submissions: "695498"
-testcase-example: "[3,9,20,null,null,15,7]"
+testcase-example: |
+   [3,9,20,null,null,15,7]
 ---
 
 ## Problem

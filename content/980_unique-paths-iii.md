@@ -9,7 +9,8 @@ difficulty: Hard
 acceptance: 76.9%
 total-accepted: "56420"
 total-submissions: "73323"
-testcase-example: "[[1,0,0,0],[0,0,0,0],[0,0,2,-1]]"
+testcase-example: |
+  [[1,0,0,0],[0,0,0,0],[0,0,2,-1]]
 ---
 
 ## Problem

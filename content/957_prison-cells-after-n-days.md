@@ -8,7 +8,8 @@ difficulty: Medium
 acceptance: 40.4%
 total-accepted: "101409"
 total-submissions: "251106"
-testcase-example: "[0,1,0,1,1,0,0,1]\n7"
+testcase-example: |
+  [0,1,0,1,1,0,0,1]\n7
 ---
 
 ## Problem
