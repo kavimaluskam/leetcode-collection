@@ -28,6 +28,14 @@ module.exports = {
               maxWidth: 560.63,
             },
           },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              aliases: { py3: "python" },
+              showLineNumbers: false,
+              noInlineHighlight: true,
+            },
+          },
         ],
       },
     },
