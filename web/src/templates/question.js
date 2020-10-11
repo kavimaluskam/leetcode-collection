@@ -10,6 +10,7 @@ const Wrapper = styled.div`
   font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen-Sans,
     Ubuntu, Cantarell, helvetica neue, sans-serif;
   -webkit-font-smoothing: antialiased;
+  line-height: 1.5rem;
   > * {
     grid-column: 2;
   }
