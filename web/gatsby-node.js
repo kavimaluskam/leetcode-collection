@@ -78,8 +78,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       createPage({
         path:
           i === 0
-            ? `/tags/${item.fieldValue}/`
-            : `/tags/${item.fieldValue}/${i + 1}`,
+            ? `/tag/${item.fieldValue}/`
+            : `/tag/${item.fieldValue}/${i + 1}`,
         component: tagTemplate,
         context: {
           tag: item.fieldValue,

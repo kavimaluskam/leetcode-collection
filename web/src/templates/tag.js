@@ -53,7 +53,7 @@ const Tags = ({ pageContext, data }) => {
         <h1>{tag}</h1>
       </Headline>
       <Listing listing={data.listing} />
-      <Pagination prefix={`/tags/${tag}/`} {...pageContext} />
+      <Pagination prefix={`/tag/${tag}/`} {...pageContext} />
     </Wrapper>
   )
 }
