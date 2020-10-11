@@ -84,7 +84,7 @@ const TagItem = styled(Item)`
 const Metadata = ({ url, tags, difficulty, acceptance }) => (
   <Container>
     <Wrapper>
-      <LeetcodeLink href={url}>
+      <LeetcodeLink href={url} target="_blank" rel="noopener noreferrer">
         <img src={LeetcodeIcon} alt="lc" />
         &nbsp;View question in leetcode
       </LeetcodeLink>

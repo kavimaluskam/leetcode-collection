@@ -15,6 +15,13 @@ module.exports = {
         path: `${__dirname}/../content`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `home-page`,
+        path: `${__dirname}/../README.md`,
+      },
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
