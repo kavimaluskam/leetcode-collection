@@ -19,7 +19,7 @@ const Wrapper = styled.div`
     1fr;
 `
 
-const Home = ({ data }) => {
+const Home = ({ pageContext, data }) => {
   const { html } = data.homepage.edges[0].node
   return (
     <Wrapper>
@@ -30,9 +30,8 @@ const Home = ({ data }) => {
 }
 
 export default Home
-
 export const pageQuery = graphql`
-  {
+  query($skip: Int!, $limit: Int!) {
     homepage: allMarkdownRemark(filter: { frontmatter: { id: { eq: null } } }) {
       edges {
         node {
@@ -43,7 +42,8 @@ export const pageQuery = graphql`
     listing: allMarkdownRemark(
       filter: { frontmatter: { id: { gt: 0 } } }
       sort: { order: ASC, fields: [frontmatter___id] }
-      limit: 3000
+      limit: $limit
+      skip: $skip
     ) {
       edges {
         node {
