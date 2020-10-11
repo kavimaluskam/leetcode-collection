@@ -10,7 +10,6 @@ const Wrapper = styled.div`
   font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen-Sans,
     Ubuntu, Cantarell, helvetica neue, sans-serif;
   -webkit-font-smoothing: antialiased;
-  line-height: 1.5rem;
   > * {
     grid-column: 2;
   }
@@ -19,6 +18,10 @@ const Wrapper = styled.div`
     1fr
     min(65ch, 100%)
     1fr;
+`
+
+const Markdown = styled.div`
+  line-height: 1.5rem;
 `
 
 const Template = ({ data }) => {
@@ -37,7 +40,7 @@ const Template = ({ data }) => {
         difficulty={difficulty}
         acceptance={acceptance}
       />
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <Markdown dangerouslySetInnerHTML={{ __html: html }} />
     </Wrapper>
   )
 }
