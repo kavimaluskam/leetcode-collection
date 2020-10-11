@@ -42,28 +42,28 @@ const Headline = styled.div`
   }
 `
 
-const Tags = ({ pageContext, data }) => {
-  const { tag } = pageContext
+const Difficulties = ({ pageContext, data }) => {
+  const { difficulty } = pageContext
   return (
     <Wrapper>
       <Headline>
         <h2>
           <Link to="/">All questions</Link> /&nbsp;
         </h2>
-        <h1>{tag}</h1>
+        <h1>{difficulty}</h1>
       </Headline>
       <Listing listing={data.listing} />
-      <Pagination prefix={`/tag/${tag}/`} {...pageContext} />
+      <Pagination prefix={`/difficulty/${difficulty}/`} {...pageContext} />
     </Wrapper>
   )
 }
 
-export default Tags
+export default Difficulties
 export const pageQuery = graphql`
-  query($tag: String, $skip: Int!, $limit: Int!) {
+  query($difficulty: String, $skip: Int!, $limit: Int!) {
     listing: allMarkdownRemark(
       sort: { fields: [frontmatter___id], order: ASC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
+      filter: { frontmatter: { difficulty: { eq: $difficulty } } }
       limit: $limit
       skip: $skip
     ) {
