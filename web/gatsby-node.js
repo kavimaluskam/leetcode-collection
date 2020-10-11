@@ -35,16 +35,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   // create home page
   const questions = result.data.questions.edges
-  const questionPerPage = 10
-  const questionNumPages = Math.ceil(questions.length / questionPerPage)
+  const questionPerListingPage = 10
+  const questionNumPages = Math.ceil(questions.length / questionPerListingPage)
 
   Array.from({ length: questionNumPages }).forEach((_, i) => {
     createPage({
       path: i === 0 ? `/` : `/${i + 1}`,
       component: homeTemplate,
       context: {
-        limit: questionPerPage,
-        skip: i * questionPerPage,
+        limit: questionPerListingPage,
+        skip: i * questionPerListingPage,
         numPages: questionNumPages,
         currentPage: i + 1,
       },
@@ -65,9 +65,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   // create tag pages
   const tags = result.data.tags.group
-  const tagPerPage = 10
+  const questionPerTagPage = 10
   tags.forEach(tag => {
-    const tagNumPages = Math.ceil(tag.totalCount / tagPerPage)
+    const tagNumPages = Math.ceil(tag.totalCount / questionPerTagPage)
     Array.from({ length: tagNumPages }).forEach((_, i) => {
       createPage({
         path:
@@ -77,8 +77,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         component: tagTemplate,
         context: {
           tag: tag.fieldValue,
-          limit: tagPerPage,
-          skip: i * tagPerPage,
+          limit: questionPerTagPage,
+          skip: i * questionPerTagPage,
           numPages: tagNumPages,
           currentPage: i + 1,
         },
