@@ -21,7 +21,7 @@ const Wrapper = styled.div`
   }
 
   li.active {
-    color: #f09a1a;
+    color: ${props => props.theme.color.primary};
   }
   li.disabled {
     color: white;

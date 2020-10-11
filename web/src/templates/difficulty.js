@@ -17,6 +17,8 @@ const Wrapper = styled.div`
     1fr
     min(65ch, 100%)
     1fr;
+  color: ${props => props.theme.color.text};
+  background: ${props => props.theme.color.background};
 `
 
 const Headline = styled.div`
@@ -27,17 +29,17 @@ const Headline = styled.div`
     text-decoration: none;
   }
   a:hover {
-    color: #f09a1a;
+    color: ${props => props.theme.color.primary};
   }
   h1 {
     display: inline;
   }
   h2 {
-    color: #78757a;
+    color: ${props => props.theme.color.lightGrey};
     display: inline;
   }
   h2 a {
-    color: #78757a;
+    color: ${props => props.theme.color.lightGrey};
   }
 `
 

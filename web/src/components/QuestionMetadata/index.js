@@ -30,7 +30,7 @@ const TagsWrapper = styled(Wrapper)`
 `
 
 const LeetcodeLink = styled.a`
-  color: #78757a;
+  color: ${props => props.theme.color.lightGrey};
   display: flex;
   font-weight: 400;
   font-size: 0.8rem;
@@ -38,7 +38,7 @@ const LeetcodeLink = styled.a`
   text-decoration: none;
 
   &:hover {
-    color: #f09a1a;
+    color: ${props => props.theme.color.primary};
   }
 `
 

@@ -18,6 +18,8 @@ const Wrapper = styled.div`
     1fr
     min(65ch, 100%)
     1fr;
+  color: ${props => props.theme.color.text};
+  background: ${props => props.theme.color.background};
 `
 
 const Markdown = styled.div`
