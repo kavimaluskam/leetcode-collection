@@ -1,24 +1,31 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
+import styled from "styled-components"
+
+import Listing from "../components/QuestionListing"
+
+const Wrapper = styled.div`
+  font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen-Sans,
+    Ubuntu, Cantarell, helvetica neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5rem;
+  > * {
+    grid-column: 2;
+  }
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(65ch, 100%)
+    1fr;
+`
 
 const Home = ({ data }) => {
-  const list = data.allMarkdownRemark.edges.map(
-    ({ node: { frontmatter } }) => frontmatter
-  )
-
+  const { html } = data.homepage.edges[0].node
   return (
-    <>
-      <h1>Leetcode Collection</h1>
-      <ul>
-        {list.map(item => (
-          <li key={item.id}>
-            <Link to={`/question/${item.id}`}>
-              {item.id}: {item.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </>
+    <Wrapper>
+      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <Listing listing={data.listing} />
+    </Wrapper>
   )
 }
 
@@ -26,15 +33,25 @@ export default Home
 
 export const pageQuery = graphql`
   {
-    allMarkdownRemark(
+    homepage: allMarkdownRemark(filter: { frontmatter: { id: { eq: null } } }) {
+      edges {
+        node {
+          html
+        }
+      }
+    }
+    listing: allMarkdownRemark(
+      filter: { frontmatter: { id: { gt: 0 } } }
       sort: { order: ASC, fields: [frontmatter___id] }
-      limit: 10000
+      limit: 3000
     ) {
       edges {
         node {
           frontmatter {
             id
             title
+            difficulty
+            tags
           }
         }
       }
