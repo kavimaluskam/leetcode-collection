@@ -1,8 +1,10 @@
+const QUESTION_PER_PAGE = 10
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   const homeTemplate = require.resolve(`./src/templates/home.js`)
   const questionTemplate = require.resolve(`./src/templates/question.js`)
-  const tagTemplate = require.resolve(`./src/templates/tag.js`)
+  const difficultyTemplate = require.resolve(`./src/templates/difficulty.js`)
 
   const result = await graphql(`
     {
@@ -25,6 +27,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           totalCount
         }
       }
+      difficulties: allMarkdownRemark(limit: 2000) {
+        group(field: frontmatter___difficulty) {
+          fieldValue
+          totalCount
+        }
+      }
     }
   `)
   // handle errors
@@ -35,16 +43,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   // create home page
   const questions = result.data.questions.edges
-  const questionPerListingPage = 10
-  const questionNumPages = Math.ceil(questions.length / questionPerListingPage)
+  const questionNumPages = Math.ceil(questions.length / QUESTION_PER_PAGE)
 
   Array.from({ length: questionNumPages }).forEach((_, i) => {
     createPage({
       path: i === 0 ? `/` : `/${i + 1}`,
       component: homeTemplate,
       context: {
-        limit: questionPerListingPage,
-        skip: i * questionPerListingPage,
+        limit: QUESTION_PER_PAGE,
+        skip: i * QUESTION_PER_PAGE,
         numPages: questionNumPages,
         currentPage: i + 1,
       },
@@ -65,21 +72,42 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   // create tag pages
   const tags = result.data.tags.group
-  const questionPerTagPage = 10
-  tags.forEach(tag => {
-    const tagNumPages = Math.ceil(tag.totalCount / questionPerTagPage)
-    Array.from({ length: tagNumPages }).forEach((_, i) => {
+  tags.forEach(item => {
+    const numPages = Math.ceil(item.totalCount / QUESTION_PER_PAGE)
+    Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
         path:
           i === 0
-            ? `/tags/${tag.fieldValue}/`
-            : `/tags/${tag.fieldValue}/${i + 1}`,
+            ? `/tags/${item.fieldValue}/`
+            : `/tags/${item.fieldValue}/${i + 1}`,
         component: tagTemplate,
         context: {
-          tag: tag.fieldValue,
-          limit: questionPerTagPage,
-          skip: i * questionPerTagPage,
-          numPages: tagNumPages,
+          tag: item.fieldValue,
+          limit: QUESTION_PER_PAGE,
+          skip: i * QUESTION_PER_PAGE,
+          numPages,
+          currentPage: i + 1,
+        },
+      })
+    })
+  })
+
+  // create difficulty pages
+  const difficulties = result.data.difficulties.group
+  difficulties.forEach(item => {
+    const numPages = Math.ceil(item.totalCount / QUESTION_PER_PAGE)
+    Array.from({ length: numPages }).forEach((_, i) => {
+      createPage({
+        path:
+          i === 0
+            ? `/difficulty/${item.fieldValue}/`
+            : `/difficulty/${item.fieldValue}/${i + 1}`,
+        component: difficultyTemplate,
+        context: {
+          difficulty: item.fieldValue,
+          limit: QUESTION_PER_PAGE,
+          skip: i * QUESTION_PER_PAGE,
+          numPages,
           currentPage: i + 1,
         },
       })
