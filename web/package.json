@@ -25,6 +25,7 @@
     "prismjs": "^1.22.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-paginate": "^6.5.0",
     "styled-components": "^5.2.0"
   },
   "devDependencies": {
