@@ -43,9 +43,9 @@ const Listing = ({ listing, showMetadata = false }) => {
           </Link>
           {showMetadata && (
             <Wrapper>
-              <Difficulty>{item.difficulty}</Difficulty>
+              <Difficulty difficulty={item.difficulty} />
               {item.tags.map(tag => (
-                <Tag key={tag}>{tag}</Tag>
+                <Tag key={tag} tag={tag} />
               ))}
             </Wrapper>
           )}

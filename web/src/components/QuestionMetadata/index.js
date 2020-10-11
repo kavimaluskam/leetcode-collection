@@ -36,6 +36,10 @@ const LeetcodeLink = styled.a`
   font-size: 0.8rem;
   line-height: 1;
   text-decoration: none;
+
+  &:hover {
+    color: #f09a1a;
+  }
 `
 
 const Metadata = ({ url, tags, difficulty, acceptance }) => (
@@ -47,7 +51,7 @@ const Metadata = ({ url, tags, difficulty, acceptance }) => (
       </LeetcodeLink>
     </Wrapper>
     <ResponsiveWrapper>
-      <Difficulty>{difficulty}</Difficulty>
+      <Difficulty difficulty={difficulty} />
       <Acceptance>
         <img src={AcceptanceIcon} alt="accept" />
         &nbsp;{acceptance}
@@ -55,7 +59,7 @@ const Metadata = ({ url, tags, difficulty, acceptance }) => (
     </ResponsiveWrapper>
     <TagsWrapper>
       {tags.map(tag => (
-        <Tag key={tag}>{tag}</Tag>
+        <Tag key={tag} tag={tag} />
       ))}
     </TagsWrapper>
   </Container>
