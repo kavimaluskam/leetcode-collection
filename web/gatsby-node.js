@@ -19,6 +19,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           }
         }
       }
+      tags: allMarkdownRemark(limit: 2000) {
+        group(field: frontmatter___tags) {
+          fieldValue
+          totalCount
+        }
+      }
     }
   `)
   // handle errors
@@ -30,16 +36,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   // create home page
   const questions = result.data.questions.edges
   const questionPerPage = 10
-  const numPages = Math.ceil(questions.length / questionPerPage)
+  const questionNumPages = Math.ceil(questions.length / questionPerPage)
 
-  Array.from({ length: numPages }).forEach((_, i) => {
+  Array.from({ length: questionNumPages }).forEach((_, i) => {
     createPage({
       path: i === 0 ? `/` : `/${i + 1}`,
       component: homeTemplate,
       context: {
         limit: questionPerPage,
         skip: i * questionPerPage,
-        numPages,
+        numPages: questionNumPages,
         currentPage: i + 1,
       },
     })
@@ -54,6 +60,29 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         // additional data can be passed via context
         id: node.frontmatter.id,
       },
+    })
+  })
+
+  // create tag pages
+  const tags = result.data.tags.group
+  const tagPerPage = 10
+  tags.forEach(tag => {
+    const tagNumPages = Math.ceil(tag.totalCount / tagPerPage)
+    Array.from({ length: tagNumPages }).forEach((_, i) => {
+      createPage({
+        path:
+          i === 0
+            ? `/tags/${tag.fieldValue}/`
+            : `/tags/${tag.fieldValue}/${i + 1}`,
+        component: tagTemplate,
+        context: {
+          tag: tag.fieldValue,
+          limit: tagPerPage,
+          skip: i * tagPerPage,
+          numPages: tagNumPages,
+          currentPage: i + 1,
+        },
+      })
     })
   })
 }

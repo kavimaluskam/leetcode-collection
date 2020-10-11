@@ -35,30 +35,33 @@ const Wrapper = styled.div`
 `
 
 const Pagination = ({ prefix, numPages, currentPage }) => {
-  return (
-    <Wrapper>
-      <ReactPaginate
-        pageCount={numPages}
-        marginPagesDisplayed={1}
-        pageRangeDisplayed={3}
-        initialPage={currentPage - 1}
-        previousLabel={"<"}
-        nextLabel={">"}
-        breakLabel={"..."}
-        breakClassName={"break-me"}
-        onPageChange={({ selected }) => {
-          if (selected === 0) {
-            navigate(`${prefix}`)
-          } else {
-            navigate(`${prefix}${selected + 1}`)
-          }
-        }}
-        containerClassName={"pagination"}
-        subContainerClassName={"pages pagination"}
-        activeClassName={"active"}
-      />
-    </Wrapper>
-  )
+  if (numPages > 1) {
+    return (
+      <Wrapper>
+        <ReactPaginate
+          pageCount={numPages}
+          marginPagesDisplayed={1}
+          pageRangeDisplayed={3}
+          initialPage={currentPage - 1}
+          previousLabel={"<"}
+          nextLabel={">"}
+          breakLabel={"..."}
+          breakClassName={"break-me"}
+          onPageChange={({ selected }) => {
+            if (selected === 0) {
+              navigate(`${prefix}`)
+            } else {
+              navigate(`${prefix}${selected + 1}`)
+            }
+          }}
+          containerClassName={"pagination"}
+          subContainerClassName={"pages pagination"}
+          activeClassName={"active"}
+        />
+      </Wrapper>
+    )
+  }
+  return <Wrapper />
 }
 
 export default Pagination

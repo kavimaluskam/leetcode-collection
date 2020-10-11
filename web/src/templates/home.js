@@ -20,7 +20,7 @@ const Wrapper = styled.div`
   -webkit-font-smoothing: antialiased;
 `
 
-const Content = styled.div`
+const Markdown = styled.div`
   a {
     color: black;
     text-decoration: none;
@@ -34,10 +34,8 @@ const Home = ({ pageContext, data }) => {
   const { html } = data.homepage.edges[0].node
   return (
     <Wrapper>
-      <Content>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-        <Listing listing={data.listing} />
-      </Content>
+      <Markdown dangerouslySetInnerHTML={{ __html: html }} />
+      <Listing listing={data.listing} />
       <Pagination prefix="/" {...pageContext} />
     </Wrapper>
   )
