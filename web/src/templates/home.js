@@ -18,15 +18,17 @@ const Wrapper = styled.div`
   font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen-Sans,
     Ubuntu, Cantarell, helvetica neue, sans-serif;
   -webkit-font-smoothing: antialiased;
+  color: ${props => props.theme.color.text};
+  background: ${props => props.theme.color.background};
 `
 
 const Markdown = styled.div`
   a {
-    color: black;
+    color: ${props => props.theme.color.text};
     text-decoration: none;
   }
   a:hover {
-    color: #f09a1a;
+    color: ${props => props.theme.color.primary};
   }
 `
 

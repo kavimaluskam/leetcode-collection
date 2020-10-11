@@ -5,7 +5,21 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    url: `https://kavimaluskam.github.io/leetcode-collection`,
+    title: `Leetcode Collection`,
+    description: `Personal leetcode challenge/documentation with leetcode-cli`,
+    author: `@kavimaluskam`,
+    keywords: [
+      `leetcode`,
+      `blog`,
+      `interview`,
+      `leetcode problems`,
+      `interview questions`,
+      `coding interview`,
+    ],
+    language: `en`,
+  },
   plugins: [
     `gatsby-plugin-styled-components`,
     {
@@ -47,5 +61,6 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-layout`,
   ],
 }

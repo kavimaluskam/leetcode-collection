@@ -10,11 +10,11 @@ const Container = styled.div`
   border-bottom: 1px solid rgb(238, 238, 238);
   padding-bottom: 0.25rem;
   a {
-    color: black;
+    color: ${props => props.theme.color.text};
     text-decoration: none;
   }
   a:hover {
-    color: #f09a1a;
+    color: ${props => props.theme.color.primary};
   }
 `
 

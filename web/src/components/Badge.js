@@ -24,11 +24,11 @@ const Item = styled.div`
 `
 
 export const Acceptance = styled(Item)`
-  color: #78757a;
+  color: ${props => props.theme.color.lightGrey};
 `
 const TagWrapper = styled(Item)`
-  color: #9013fe;
-  background: #f2e3ff;
+  color: ${props => props.theme.color.tag};
+  background: ${props => props.theme.color.tagBackground};
 `
 
 export const Tag = ({ tag }) => (
@@ -40,15 +40,15 @@ export const Tag = ({ tag }) => (
 const DifficultyWrapper = styled(Item)`
   color: white;
   text-transform: lowercase;
-  background-color: ${({ children }) => {
+  background-color: ${({ children, theme }) => {
     if (children === "Easy") {
-      return "#43a047"
+      return theme.color.easy
     }
     if (children === "Medium") {
-      return "#ef6c00"
+      return theme.color.medium
     }
     if (children === "Hard") {
-      return "#e91e63"
+      return theme.color.hard
     }
   }};
 `
