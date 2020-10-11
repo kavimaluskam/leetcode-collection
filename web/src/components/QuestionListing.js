@@ -9,6 +9,13 @@ const Container = styled.div`
   padding-top: 0.25rem;
   border-bottom: 1px solid rgb(238, 238, 238);
   padding-bottom: 0.25rem;
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #f09a1a;
+  }
 `
 
 const ListItem = styled.div`
