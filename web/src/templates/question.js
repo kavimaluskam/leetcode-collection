@@ -1,20 +1,44 @@
+import "../styles/prism-vsc-dark-plus.css"
+
 import React from "react"
 import { graphql } from "gatsby"
+import styled from "styled-components"
+
+import Metadata from "../components/QuestionMetadata"
+
+const Wrapper = styled.div`
+  font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen-Sans,
+    Ubuntu, Cantarell, helvetica neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5rem;
+  > * {
+    grid-column: 2;
+  }
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(65ch, 100%)
+    1fr;
+`
 
 const Template = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
+  const { id, title, url, tags, difficulty, acceptance } = frontmatter
+
   return (
-    <div className="blog-post-container">
-      <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.url}</h2>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      </div>
-    </div>
+    <Wrapper>
+      <h1>
+        {id}. {title}
+      </h1>
+      <Metadata
+        url={url}
+        tags={tags}
+        difficulty={difficulty}
+        acceptance={acceptance}
+      />
+      <div dangerouslySetInnerHTML={{ __html: html }} />
+    </Wrapper>
   )
 }
 
@@ -25,9 +49,12 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { id: { eq: $id } }) {
       html
       frontmatter {
+        id
         title
         url
-        id
+        tags
+        difficulty
+        acceptance
       }
     }
   }
