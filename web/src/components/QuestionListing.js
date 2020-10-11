@@ -1,18 +1,37 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
-import styled from "styled-components"
+import { Link } from "gatsby"
 
-const Listing = ({ list }) => {
+import { Wrapper, Tag, Difficulty } from "./Badge"
+
+const Listing = ({ listing, showMetadata = false }) => {
+  const list = listing.edges.map(
+    ({
+      node: {
+        frontmatter: { ...data },
+      },
+    }) => data
+  )
+
   return (
-    <ul>
+    <>
       {list.map(item => (
-        <li key={item.id}>
+        <div key={item.id}>
           <Link to={`/question/${item.id}`}>
-            {item.id}: {item.title}
+            <h2>
+              {item.id}: {item.title}
+            </h2>
           </Link>
-        </li>
+          {showMetadata && (
+            <Wrapper>
+              <Difficulty>{item.difficulty}</Difficulty>
+              {item.tags.map(tag => (
+                <Tag key={tag}>{tag}</Tag>
+              ))}
+            </Wrapper>
+          )}
+        </div>
       ))}
-    </ul>
+    </>
   )
 }
 

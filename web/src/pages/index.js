@@ -21,18 +21,10 @@ const Wrapper = styled.div`
 
 const Home = ({ data }) => {
   const { html } = data.homepage.edges[0].node
-  const list = data.listing.edges.map(
-    ({
-      node: {
-        frontmatter: { ...data },
-      },
-    }) => data
-  )
-
   return (
     <Wrapper>
       <div dangerouslySetInnerHTML={{ __html: html }} />
-      <Listing list={list} />
+      <Listing listing={data.listing} />
     </Wrapper>
   )
 }
@@ -58,6 +50,8 @@ export const pageQuery = graphql`
           frontmatter {
             id
             title
+            difficulty
+            tags
           }
         }
       }
