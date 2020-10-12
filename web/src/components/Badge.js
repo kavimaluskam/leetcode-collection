@@ -20,7 +20,6 @@ const Item = styled.div`
   font-size: 0.8rem;
   line-height: 1;
   margin-right: 0.6rem;
-  text-decoration: none;
 `
 
 export const Acceptance = styled(Item)`

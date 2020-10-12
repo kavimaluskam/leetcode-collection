@@ -3,8 +3,8 @@ import styled from "styled-components"
 
 import { Wrapper, Acceptance, Tag, Difficulty } from "../Badge"
 
-import AcceptanceIcon from "./acceptance.svg"
-import LeetcodeIcon from "./leetcode.svg"
+import AcceptanceIcon from "./assets/acceptance.svg"
+import LeetcodeIcon from "./assets/leetcode.svg"
 
 const Container = styled.div`
   border-top: 1px solid rgb(238, 238, 238);
@@ -36,9 +36,15 @@ const LeetcodeLink = styled.a`
   font-size: 0.8rem;
   line-height: 1;
   text-decoration: none;
+  svg {
+    fill: ${props => props.theme.color.lightGrey};
+  }
 
   &:hover {
     color: ${props => props.theme.color.primary};
+    svg {
+      fill: ${props => props.theme.color.primary};
+    }
   }
 `
 
@@ -46,14 +52,14 @@ const Metadata = ({ url, tags, difficulty, acceptance }) => (
   <Container>
     <Wrapper>
       <LeetcodeLink href={url} target="_blank" rel="noopener noreferrer">
-        <img src={LeetcodeIcon} alt="lc" />
-        &nbsp;View question in leetcode
+        <LeetcodeIcon />
+        View question in leetcode
       </LeetcodeLink>
     </Wrapper>
     <ResponsiveWrapper>
       <Difficulty difficulty={difficulty} />
       <Acceptance>
-        <img src={AcceptanceIcon} alt="accept" />
+        <AcceptanceIcon />
         &nbsp;{acceptance}
       </Acceptance>
     </ResponsiveWrapper>

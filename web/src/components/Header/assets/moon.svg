@@ -1,0 +1,18 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="1.5em"
+  height="1.5em"
+  viewBox="0 0 45 45"
+>
+  <defs id="defs2992">
+    <linearGradient id="linearGradient4879">
+      <stop id="stop4881" offset="0" style="stop-color:#000000ff0000;stop-opacity:0"/>
+      <stop id="stop4883" offset="1" style="stop-color:#000000ff;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <path
+    d="m 17.734375,9.92185 c -4.654915,2.5463 -7.8125,7.4764 -7.8125,13.1563 0,8.2842 6.715729,15 15,15 5.679881,0 10.609961,-3.1576 13.15625,-7.8125 -2.125399,1.1546 -4.567415,1.8125 -7.15625,1.8125 -8.284271,0 -15,-6.7158 -15,-15 0,-2.5889 0.657914,-5.0309 1.8125,-7.1563 z"
+    id="path5315"
+  />
+</svg>

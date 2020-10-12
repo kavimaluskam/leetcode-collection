@@ -1,7 +1,10 @@
+import "../styles/index.css"
+
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Helmet from "react-helmet"
-import { ThemeProvider } from "styled-components"
+import styled, { ThemeProvider } from "styled-components"
+import Header from "../components/Header"
 
 import theme from "../styles/theme"
 
@@ -9,16 +12,42 @@ import favicon16 from "../../static/favicon-16x16.png"
 import favicon32 from "../../static/favicon-32x32.png"
 import faviconApple from "../../static/apple-touch-icon.png"
 
+const ContentWrapper = styled.div`
+  font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen-Sans,
+    Ubuntu, Cantarell, helvetica neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  > * {
+    grid-column: 2;
+  }
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(65ch, 100%)
+    1fr;
+  margin-top: 30px;
+  color: ${props => props.theme.color.text};
+  background: ${props => props.theme.color.background};
+`
+
 const TemplateWrapper = ({ children }) => {
   const {
     site: {
-      siteMetadata: { url, title, description, author, keywords, language },
+      siteMetadata: {
+        url,
+        sourceUrl,
+        title,
+        description,
+        author,
+        keywords,
+        language,
+      },
     },
   } = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
           url
+          sourceUrl
           title
           description
           author
@@ -47,7 +76,10 @@ const TemplateWrapper = ({ children }) => {
           <meta property="og:url" content={url} />
           <meta property="og:image" content="/img/og-image.webp" />
         </Helmet>
-        <main>{children}</main>
+        <Header sourceUrl={sourceUrl} title={title} author={author} />
+        <ContentWrapper>
+          <main>{children}</main>
+        </ContentWrapper>
       </>
     </ThemeProvider>
   )
