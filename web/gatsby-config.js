@@ -7,6 +7,7 @@
 module.exports = {
   siteMetadata: {
     url: `https://kavimaluskam.github.io/leetcode-collection`,
+    sourceUrl: `https://github.com/kavimaluskam/leetcode-collection`,
     title: `Leetcode Collection`,
     description: `Personal leetcode challenge/documentation with leetcode-cli`,
     author: `@kavimaluskam`,
@@ -62,5 +63,13 @@ module.exports = {
       },
     },
     `gatsby-plugin-layout`,
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
   ],
 }

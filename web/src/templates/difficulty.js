@@ -5,22 +5,6 @@ import styled from "styled-components"
 import Listing from "../components/QuestionListing"
 import Pagination from "../components/Pagination"
 
-const Wrapper = styled.div`
-  font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen-Sans,
-    Ubuntu, Cantarell, helvetica neue, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  > * {
-    grid-column: 2;
-  }
-  display: grid;
-  grid-template-columns:
-    1fr
-    min(65ch, 100%)
-    1fr;
-  color: ${props => props.theme.color.text};
-  background: ${props => props.theme.color.background};
-`
-
 const Headline = styled.div`
   margin-block-start: 1.5em;
   margin-block-end: 1.5em;
@@ -46,7 +30,7 @@ const Headline = styled.div`
 const Difficulties = ({ pageContext, data }) => {
   const { difficulty } = pageContext
   return (
-    <Wrapper>
+    <>
       <Headline>
         <h2>
           <Link to="/">All questions</Link> /&nbsp;
@@ -55,7 +39,7 @@ const Difficulties = ({ pageContext, data }) => {
       </Headline>
       <Listing listing={data.listing} />
       <Pagination prefix={`/difficulty/${difficulty}/`} {...pageContext} />
-    </Wrapper>
+    </>
   )
 }
 
