@@ -59,6 +59,8 @@ export const pageQuery = graphql`
           frontmatter {
             id
             title
+            difficulty
+            tags
           }
         }
       }
