@@ -2,6 +2,8 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 
+import Helmet from "react-helmet"
+
 const Container = styled.div`
   h1 {
     a {
@@ -31,11 +33,13 @@ const Container = styled.div`
 
 const TagsPage = ({
   data: {
+    site,
     tags: { group: tags },
     difficulties: { group: difficulties },
   },
 }) => (
   <Container>
+    <Helmet title={`Tags | ${site.siteMetadata.title}`} />
     <h1>Difficulties</h1>
     {difficulties.map(({ fieldValue: v, totalCount: c }) => (
       <h3 key={v}>
@@ -60,6 +64,11 @@ const TagsPage = ({
 export default TagsPage
 export const pageQuery = graphql`
   query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     tags: allMarkdownRemark(limit: 2000) {
       group(field: frontmatter___tags) {
         fieldValue
