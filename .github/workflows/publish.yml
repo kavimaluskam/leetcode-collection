@@ -5,8 +5,6 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      working-directory: ./web
 
     steps:
       - uses: actions/checkout@v2
@@ -49,6 +47,8 @@ jobs:
 
       - run: yarn
         name: Install dependencies
+        working-directory: ./web
 
       - run: yarn deploy
         name: Deploy to gh-pages
+        working-directory: ./web
