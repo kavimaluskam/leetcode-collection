@@ -1,7 +1,7 @@
 name: Gatsby Publish
 
 on:
-  pull-request:
+  push:
     branches:
       - master
 
