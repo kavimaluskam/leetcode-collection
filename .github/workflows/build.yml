@@ -1,57 +1,18 @@
-name: Node.js CI
+name: Gatsby Build
 
 on:
-  pull_request:
+  pull-request:
     branches:
       - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v1
+      - uses: enriikke/gatsby-gh-pages-action@v2
         with:
-          node-version: 12
-
-      - name: Yarn cache directory
-        id: yarn-cache-dir
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - name: Yarn cache
-        uses: actions/cache@v1
-        id: yarn-cache
-        with:
-          path: ${{ steps.yarn-cache-dir.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
-      # In order to make gatsby incremental build works, it's necessary .cache
-      # and public folder.
-      - name: Gatsby Cache Folder
-        uses: actions/cache@v1
-        id: gatsby-cache-folder
-        with:
-          path: .cache
-          key: ${{ runner.os }}-cache-gatsby
-          restore-keys: |
-            ${{ runner.os }}-cache-gatsby
-
-      - name: Gatsby Public Folder
-        uses: actions/cache@v1
-        id: gatsby-public-folder
-        with:
-          path: public/
-          key: ${{ runner.os }}-public-gatsby
-          restore-keys: |
-            ${{ runner.os }}-public-gatsby
-
-      - run: yarn
-        name: Install dependencies
-        working-directory: ./web
-
-      - run: yarn build
-        name: Build website
-        working-directory: ./web
+          access-token: ${{ secrets.ACCESS_TOKEN }}
+          deploy-branch: gh-pages
+          gatsby-args: --prefix-paths
+          skip-publish: true
