@@ -25,7 +25,7 @@ const ThemeButtonWrapper = styled.a`
   transform: rotate(0deg);
   overflow: hidden;
   transition: all 0.3s ease-out;
-  transform: ${props => (props.rotate ? `rotate(180deg)` : "")};
+  transform: ${props => (props.alt === "light" ? `rotate(180deg)` : "")};
 `
 
 const ButtonBox = ({ sourceUrl }) => {
@@ -46,11 +46,7 @@ const ButtonBox = ({ sourceUrl }) => {
         <GithubIcon />
       </Link>
       &nbsp; &nbsp;
-      <ThemeButtonWrapper
-        href="#"
-        rotate={colorMode === "light"}
-        onClick={toggleColorMode}
-      >
+      <ThemeButtonWrapper href="#" alt={colorMode} onClick={toggleColorMode}>
         {colorMode === "light" ? <SunIcon /> : <MoonIcon />}
       </ThemeButtonWrapper>
     </Container>
