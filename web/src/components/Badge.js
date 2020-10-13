@@ -25,9 +25,10 @@ const Item = styled.div`
 export const Acceptance = styled(Item)`
   color: var(--color-lightGrey);
 `
+
 const TagWrapper = styled(Item)`
-  color: var(--color-tag);
-  background: var(--color-tagBackground);
+  color: var(--color-background);
+  background: var(--color-tag);
 `
 
 export const Tag = ({ tag }) => (

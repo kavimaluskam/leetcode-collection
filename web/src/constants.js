@@ -17,23 +17,19 @@ export const COLORS = {
   },
   easy: {
     light: "#43a047",
-    dark: "#43a047",
+    dark: "#ccf6c8",
   },
   medium: {
     light: "#ef6c00",
-    dark: "#ef6c00",
+    dark: "#f6d6ad",
   },
   hard: {
     light: "#e91e63",
-    dark: "#e91e63",
+    dark: "#f98f8f",
   },
   tag: {
     light: "#9013fe",
-    dark: "#9013fe",
-  },
-  tagBackground: {
-    light: "#f2e3ff",
-    dark: "#f2e3ff",
+    dark: "#e0bcff",
   },
   codeText: {
     light: "#2a2a2a",
