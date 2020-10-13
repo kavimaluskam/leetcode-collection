@@ -15,7 +15,6 @@ const Markdown = styled.div`
   }
   a:hover {
     color: var(--color-primary);
-    border-bottom: 0.3px solid var(--color-primary);
   }
 `
 
