@@ -2,6 +2,8 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 
+import Helmet from "react-helmet"
+
 import Listing from "../components/QuestionListing"
 import Pagination from "../components/Pagination"
 
@@ -31,6 +33,7 @@ const Difficulties = ({ pageContext, data }) => {
   const { difficulty } = pageContext
   return (
     <>
+      <Helmet title={`${difficulty} | ${data.site.siteMetadata.title}`} />
       <Headline>
         <h2>
           <Link to="/tags">All tags</Link> /&nbsp;
@@ -46,6 +49,11 @@ const Difficulties = ({ pageContext, data }) => {
 export default Difficulties
 export const pageQuery = graphql`
   query($difficulty: String, $skip: Int!, $limit: Int!) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     listing: allMarkdownRemark(
       sort: { fields: [frontmatter___id], order: ASC }
       filter: { frontmatter: { difficulty: { eq: $difficulty } } }
