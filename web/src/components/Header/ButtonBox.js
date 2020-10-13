@@ -9,6 +9,8 @@ import MoonIcon from "./assets/moon.svg"
 import SunIcon from "./assets/sun.svg"
 
 const Container = styled.div`
+  transition: opacity 0.7s;
+  opacity: ${props => (props.colorMode ? 1 : 0)};
   display: inline-flex;
   margin-left: auto;
   height: 1.5rem;
@@ -36,12 +38,8 @@ const ButtonBox = ({ sourceUrl }) => {
     colorMode === "light" ? setColorMode("dark") : setColorMode("light")
   }
 
-  if (!colorMode) {
-    return <></>
-  }
-
   return (
-    <Container>
+    <Container colorMode={colorMode}>
       <Link to={sourceUrl}>
         <GithubIcon />
       </Link>

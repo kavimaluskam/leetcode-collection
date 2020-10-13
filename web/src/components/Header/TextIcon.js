@@ -2,7 +2,11 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
+import { ThemeContext } from "../../contexts/ThemeContext"
+
 const Container = styled.div`
+  transition: opacity 0.7s;
+  opacity: ${props => (props.colorMode ? 1 : 0)};
   width: 250px;
 `
 const AppName = styled.h2`
@@ -29,9 +33,12 @@ const AuthorName = styled.span`
 `
 
 const TextIcon = ({ title, author }) => {
+  const { colorMode } = React.useContext(ThemeContext)
+
   const [titlePrefix, titlePostfix] = title.split(" ")
+
   return (
-    <Container>
+    <Container colorMode={colorMode}>
       <Link to="/">
         <AppName>
           <AppNamePrefix>{titlePrefix}</AppNamePrefix>
