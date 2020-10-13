@@ -7,6 +7,7 @@ import { ThemeContext } from "../../contexts/ThemeContext"
 import GithubIcon from "./assets/github.svg"
 import MoonIcon from "./assets/moon.svg"
 import SunIcon from "./assets/sun.svg"
+import TagIcon from "./assets/tag.svg"
 
 const Container = styled.div`
   transition: opacity 0.7s;
@@ -40,8 +41,12 @@ const ButtonBox = ({ sourceUrl }) => {
 
   return (
     <Container colorMode={colorMode}>
-      <Link to={sourceUrl}>
+      <a target="_blank" rel="noopener noreferrer" href={sourceUrl}>
         <GithubIcon />
+      </a>
+      &nbsp; &nbsp;
+      <Link to="/tags">
+        <TagIcon />
       </Link>
       &nbsp; &nbsp;
       <ThemeButtonWrapper href="#" alt={colorMode} onClick={toggleColorMode}>
