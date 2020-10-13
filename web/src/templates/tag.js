@@ -2,6 +2,8 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 
+import Helmet from "react-helmet"
+
 import Listing from "../components/QuestionListing"
 import Pagination from "../components/Pagination"
 
@@ -31,6 +33,7 @@ const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
   return (
     <>
+      <Helmet title={`${tag} | ${data.site.siteMetadata.title}`} />
       <Headline>
         <h2>
           <Link to="/tags">All tags</Link> /&nbsp;
@@ -46,6 +49,11 @@ const Tags = ({ pageContext, data }) => {
 export default Tags
 export const pageQuery = graphql`
   query($tag: String, $skip: Int!, $limit: Int!) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     listing: allMarkdownRemark(
       sort: { fields: [frontmatter___id], order: ASC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
