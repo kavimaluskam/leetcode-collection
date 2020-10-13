@@ -5,6 +5,7 @@
  */
 
 module.exports = {
+  pathPrefix: "/leetcode-collection",
   siteMetadata: {
     url: `https://kavimaluskam.github.io/leetcode-collection`,
     sourceUrl: `https://github.com/kavimaluskam/leetcode-collection`,
