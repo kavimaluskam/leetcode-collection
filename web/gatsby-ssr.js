@@ -31,6 +31,7 @@ function setColorsByTheme() {
   let root = document.documentElement
 
   root.style.setProperty(colorModeCssProp, colorMode)
+  root.style.setProperty("background", "var(--color-background)")
 
   Object.entries(colors).forEach(([name, colorByTheme]) => {
     const cssVarName = `--color-${name}`
