@@ -4,6 +4,8 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 
+import Helmet from "react-helmet"
+
 import Metadata from "../components/QuestionMetadata"
 
 const Markdown = styled.div`
@@ -19,12 +21,13 @@ const Markdown = styled.div`
 `
 
 const Template = ({ data }) => {
-  const { markdownRemark } = data
+  const { markdownRemark, site } = data
   const { frontmatter, html } = markdownRemark
   const { id, title, url, tags, difficulty, acceptance } = frontmatter
 
   return (
     <>
+      <Helmet title={`${title} | ${site.siteMetadata.title}`} />
       <h1>
         {id}. {title}
       </h1>
@@ -43,6 +46,11 @@ export default Template
 
 export const pageQuery = graphql`
   query($id: Int!) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     markdownRemark(frontmatter: { id: { eq: $id } }) {
       html
       frontmatter {
