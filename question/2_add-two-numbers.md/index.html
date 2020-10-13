@@ -1,0 +1,174 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/leetcode-collection/styles.b2f4c93e86403c766660.css">@font-face{font-family:TypoRound;src:url(/leetcode-collection/static/Typo_Round-78eb705ccc40cd1bf701b64d1253bf0a.otf)}code,pre{color:var(--color-codeText);text-shadow:none;font-family:Menlo,Monaco,Consolas,Andale Mono,Ubuntu Mono,Courier New,monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code::-moz-selection,code ::-moz-selection,code::selection,code ::selection,pre::-moz-selection,pre ::-moz-selection,pre::selection,pre ::selection{text-shadow:none;background:var(--color-codeSelection)}@media print{code,pre{text-shadow:none}}pre{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code,pre{background:var(--color-codeBackground)}:not(pre)>code{padding:.1em .3em;border-radius:.3em;color:var(--color-codeText)}.namespace{opacity:.7}.token.comment,.token.doctype,.token.doctype-tag,.token.name,.token.prolog{color:var(--color-codeComment)}.language-html .language-css .token.punctuation,.language-html .language-javascript .token.punctuation,.token.attr-value .token.punctuation.attr-equals,.token.entity,.token.operator,.token.punctuation{color:var(--color-codePunctuation)}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag,.token.unit{color:var(--color-codeConstant)}.token.atrule,.token.atrule .token.url .token.punctuation,.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:var(--color-codeSelector)}.language-css .token.string.url{text-decoration:underline}.token.boolean,.token.entity,.token.important,.token.keyword,.token.operator.arrow,.token.punctuation.interpolation-punctuation,.token.tag{color:var(--color-codeBoolean)}.token.atrule .token.rule,.token.keyword.control-flow,.token.keyword.module{color:var(--color-codeControlFlow)}.token.atrule .token.url,.token.attr-name,.token.console,.token.constant,.token.exports .token.maybe-class-name,.token.imports .token.maybe-class-name,.token.interpolation,.token.parameter,.token.property,.token.variable{color:var(--color-codeConsole)}.token.atrule .token.url .token.function,.token.function,.token.function .token.maybe-class-name{color:var(--color-codeFunction)}.token.regex{color:var(--color-codeRegex)}.token.italic{font-style:italic}.token.class-name,.token.maybe-class-name,.token.namespace{color:var(--color-codeClassName)}.token.escape,.token.selector{color:var(--color-codeEscape)}.token.cdata,.token.tag .token.punctuation{color:var(--color-codeTag)}.token.attr-value,.token.attr-value .token.punctuation{color:var(--color-codeAttrValue)}pre>code,pre[data-line]{position:relative}pre>code{z-index:1}.line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:var(--color-codeHighlight);box-shadow:inset 5px 0 0 var(--color-codeHighlightShadow);z-index:0;pointer-events:none;line-height:inherit;white-space:pre}</style><meta name="generator" content="Gatsby 2.24.73"/><style data-styled="" data-styled-version="5.2.0">.iNcVnf{-webkit-transition:opacity 0.7s;transition:opacity 0.7s;opacity:0;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;margin-left:auto;height:1.5rem;}/*!sc*/
+.iNcVnf svg{fill:var(--color-lightGrey);}/*!sc*/
+.iNcVnf svg:hover{fill:var(--color-primary);}/*!sc*/
+data-styled.g1[id="ButtonBox__Container-oynpb4-0"]{content:"iNcVnf,"}/*!sc*/
+.gKBelF{float:right;-webkit-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg);overflow:hidden;-webkit-transition:all 0.3s ease-out;transition:all 0.3s ease-out;}/*!sc*/
+data-styled.g2[id="ButtonBox__ThemeButtonWrapper-oynpb4-1"]{content:"gKBelF,"}/*!sc*/
+.efQpKY{-webkit-transition:opacity 0.7s;transition:opacity 0.7s;opacity:0;width:200px;}/*!sc*/
+data-styled.g3[id="TextIcon__Container-k3l3g-0"]{content:"efQpKY,"}/*!sc*/
+.cYptN{display:inline-block;margin:0;margin-bottom:-1rem;font-family:TypoRound,sans-serif;}/*!sc*/
+data-styled.g4[id="TextIcon__AppName-k3l3g-1"]{content:"cYptN,"}/*!sc*/
+.dqHlCG{color:var(--color-primary);}/*!sc*/
+data-styled.g5[id="TextIcon__AppNamePrefix-k3l3g-2"]{content:"dqHlCG,"}/*!sc*/
+.jhtilc{color:var(--color-text);}/*!sc*/
+data-styled.g6[id="TextIcon__AppNamePostfix-k3l3g-3"]{content:"jhtilc,"}/*!sc*/
+.iZWuBg{font-size:0.7rem;color:var(--color-lightGrey);display:inline-block;margin:0;font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen-Sans,Ubuntu,Cantarell,helvetica neue,sans-serif;}/*!sc*/
+data-styled.g7[id="TextIcon__AuthorName-k3l3g-4"]{content:"iZWuBg,"}/*!sc*/
+.kKCCIr{position:-webkit-sticky;position:sticky;z-index:3;top:0;background:var(--color-background);-webkit-transition:background 350ms ease 0s;transition:background 350ms ease 0s;-webkit-font-smoothing:antialiased;}/*!sc*/
+data-styled.g8[id="Header__Container-hszkfo-0"]{content:"kKCCIr,"}/*!sc*/
+.jRIlD{position:fixed;left:0px;right:0px;top:60px;z-index:2;pointer-events:none;-webkit-transform:translateY(-1px);-ms-transform:translateY(-1px);transform:translateY(-1px);}/*!sc*/
+data-styled.g9[id="Header__Shadow-hszkfo-1"]{content:"jRIlD,"}/*!sc*/
+.bEhSni{position:relative;z-index:2;width:100%;max-width:850px;margin-left:auto;margin-right:auto;}/*!sc*/
+data-styled.g10[id="Header__AppBar-hszkfo-2"]{content:"bEhSni,"}/*!sc*/
+.iscwEC{height:60px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0px;}/*!sc*/
+data-styled.g11[id="Header__ToolBar-hszkfo-3"]{content:"iscwEC,"}/*!sc*/
+.dptaYY{fill:var(--color-background);}/*!sc*/
+data-styled.g12[id="Header__StyledShadowBox-hszkfo-4"]{content:"dptaYY,"}/*!sc*/
+.cyMxxM{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen-Sans,Ubuntu,Cantarell,helvetica neue,sans-serif;-webkit-font-smoothing:antialiased;display:grid;grid-template-columns:1fr min(65ch,100%) 1fr;padding-top:80px;color:var(--color-text);background:var(--color-background);}/*!sc*/
+.cyMxxM > *{grid-column:2;}/*!sc*/
+data-styled.g13[id="layouts__ContentWrapper-j66onx-0"]{content:"cyMxxM,"}/*!sc*/
+.cKJubm{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;width:100%;padding-bottom:0.75rem;}/*!sc*/
+data-styled.g15[id="Badge__Wrapper-sc-16thsut-0"]{content:"cKJubm,"}/*!sc*/
+.iWcxTd{-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+data-styled.g16[id="Badge__BadgeLink-sc-16thsut-1"]{content:"iWcxTd,"}/*!sc*/
+.bbkgUS{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-text-decoration:none;text-decoration:none;padding:0.4em 0.6em;border-radius:3px;font-size:0.8rem;line-height:1;margin-right:0.6rem;}/*!sc*/
+data-styled.g17[id="Badge__Item-sc-16thsut-2"]{content:"bbkgUS,"}/*!sc*/
+.erAzOP{color:var(--color-lightGrey);}/*!sc*/
+data-styled.g18[id="Badge__Acceptance-sc-16thsut-3"]{content:"erAzOP,"}/*!sc*/
+.daQXc{color:var(--color-background);background:var(--color-tag);}/*!sc*/
+data-styled.g19[id="Badge__TagWrapper-sc-16thsut-4"]{content:"daQXc,"}/*!sc*/
+.dReHuU{color:var(--color-background);text-transform:lowercase;background-color:var(--color-medium);}/*!sc*/
+data-styled.g20[id="Badge__DifficultyWrapper-sc-16thsut-5"]{content:"dReHuU,"}/*!sc*/
+.wqYQx{border-top:1px solid var(--color-lightGrey);padding-top:1rem;border-bottom:1px solid var(--color-lightGrey);padding-bottom:0.25rem;}/*!sc*/
+data-styled.g26[id="QuestionMetadata__Container-sc-1xh4054-0"]{content:"wqYQx,"}/*!sc*/
+.hFiLmw{width:25%;}/*!sc*/
+@media only screen and (max-width:600px){.hFiLmw{width:100%;}}/*!sc*/
+data-styled.g27[id="QuestionMetadata__ResponsiveWrapper-sc-1xh4054-1"]{content:"hFiLmw,"}/*!sc*/
+.ggOZLu{-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;width:75%;}/*!sc*/
+@media only screen and (max-width:600px){.ggOZLu{width:100%;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;}}/*!sc*/
+data-styled.g28[id="QuestionMetadata__TagsWrapper-sc-1xh4054-2"]{content:"ggOZLu,"}/*!sc*/
+.ctDGFc{color:var(--color-lightGrey);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;font-weight:400;font-size:0.8rem;line-height:1;-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+.ctDGFc svg{fill:var(--color-lightGrey);}/*!sc*/
+.ctDGFc:hover{color:var(--color-primary);}/*!sc*/
+.ctDGFc:hover svg{fill:var(--color-primary);}/*!sc*/
+data-styled.g29[id="QuestionMetadata__LeetcodeLink-sc-1xh4054-3"]{content:"ctDGFc,"}/*!sc*/
+.laRGkp{line-height:1.5rem;}/*!sc*/
+.laRGkp a{color:var(--color-text);-webkit-text-decoration:none;text-decoration:none;border-bottom:0.3px solid var(--color-primary);}/*!sc*/
+.laRGkp a:hover{color:var(--color-primary);}/*!sc*/
+data-styled.g30[id="question__Markdown-rgvod4-0"]{content:"laRGkp,"}/*!sc*/
+</style><style>html { 
+--color-text: #212121;
+--color-background: #ffffff;
+--color-primary: #f79f1b;
+--color-lightGrey: #8b8b8b;
+--color-easy: #43a047;
+--color-medium: #ef6c00;
+--color-hard: #e91e63;
+--color-tag: #9013fe;
+--color-codeText: #2a2a2a;
+--color-codeBackground: #f5f6f9;
+--color-codeSelection: #c1def1;
+--color-codeComment: #008000;
+--color-codePunctuation: #393a34;
+--color-codeConstant: #36acaa;
+--color-codeSelector: #9a050f;
+--color-codeBoolean: #0000ff;
+--color-codeControlFlow: #800000;
+--color-codeConsole: #36acaa;
+--color-codeFunction: #3d5afe;
+--color-codeRegex: #ff0000;
+--color-codeClassName: #2B91AF;
+--color-codeEscape: #c19029;
+--color-codeTag: #393A34;
+--color-codeAttrValue: #ff0000;
+--color-codeHighlight: #c1def1;
+--color-codeHighlightShadow: #dddef1; }</style><link as="script" rel="preload" href="/leetcode-collection/component---src-templates-question-js-c12cf4babde0720f2caa.js"/><link as="script" rel="preload" href="/leetcode-collection/app-4c53cdafaaeab9e728f2.js"/><link as="script" rel="preload" href="/leetcode-collection/framework-de237a875aa45b276a9d.js"/><link as="script" rel="preload" href="/leetcode-collection/styles-e9d24b1846c7d6eb9685.js"/><link as="script" rel="preload" href="/leetcode-collection/webpack-runtime-eac261b7bc6de0da45b5.js"/><link as="fetch" rel="preload" href="/leetcode-collection/page-data/question/2_add-two-numbers.md/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/leetcode-collection/page-data/sq/d/72776548.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/leetcode-collection/page-data/app-data.json" crossorigin="anonymous"/></head><body><script>!function(){const e=window.matchMedia("(prefers-color-scheme: dark)").matches,d=localStorage.getItem("color-mode");let a="light";a="string"==typeof d?d:e?"dark":"light";let t=document.documentElement;t.style.setProperty("--initial-color-mode",a),t.style.setProperty("background","var(--color-background)"),Object.entries({text:{light:"#212121",dark:"#dadada"},background:{light:"#ffffff",dark:"#121212"},primary:{light:"#f79f1b",dark:"#f79f1b"},lightGrey:{light:"#8b8b8b",dark:"#bfbfbf"},easy:{light:"#43a047",dark:"#ccf6c8"},medium:{light:"#ef6c00",dark:"#f6d6ad"},hard:{light:"#e91e63",dark:"#f98f8f"},tag:{light:"#9013fe",dark:"#e0bcff"},codeText:{light:"#2a2a2a",dark:"#ffffff"},codeBackground:{light:"#f5f6f9",dark:"#1e1e1e"},codeSelection:{light:"#c1def1",dark:"#75a7ca"},codeComment:{light:"#008000",dark:"#6a9955"},codePunctuation:{light:"#393a34",dark:"#d4d4d4"},codeConstant:{light:"#36acaa",dark:"#b5cea8"},codeSelector:{light:"#9a050f",dark:"#ce9178"},codeBoolean:{light:"#0000ff",dark:"#569cd6"},codeControlFlow:{light:"#800000",dark:"#c586c0"},codeConsole:{light:"#36acaa",dark:"#9cdcfe"},codeFunction:{light:"#3d5afe",dark:"#dcdcaa"},codeRegex:{light:"#ff0000",dark:"#d16969"},codeClassName:{light:"#2B91AF",dark:"#4ec9b0"},codeEscape:{light:"#c19029",dark:"#d7ba7d"},codeTag:{light:"#393A34",dark:"#808080"},codeAttrValue:{light:"#ff0000",dark:"#ce9178"},codeHighlight:{light:"#c1def1",dark:"#f7ebc6"},codeHighlightShadow:{light:"#dddef1",dark:"#f7d87c"}}).forEach(([e,d])=>{const c="--color-"+e;t.style.setProperty(c,d[a])})}();</script><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="Header__Container-hszkfo-0 kKCCIr"><div class="Header__AppBar-hszkfo-2 bEhSni"><div class="Header__ToolBar-hszkfo-3 iscwEC"><div class="TextIcon__Container-k3l3g-0 efQpKY"><a href="/leetcode-collection/"><h2 class="TextIcon__AppName-k3l3g-1 cYptN"><span class="TextIcon__AppNamePrefix-k3l3g-2 dqHlCG">Leetcode</span><span class="TextIcon__AppNamePostfix-k3l3g-3 jhtilc">Collection</span></h2><span class="TextIcon__AuthorName-k3l3g-4 iZWuBg">@kavimaluskam</span></a></div><div class="ButtonBox__Container-oynpb4-0 iNcVnf"><a target="_blank" rel="noopener noreferrer" href="https://github.com/kavimaluskam/leetcode-collection"><svg width="1.5em" height="1.5em" viewBox="0 0 30 30"><path d="M19,30h-3.996h-4c0,0,0.011-2.372,0-4  c-5.473,1.178-7-3-7-3c-1-2-2-3-2-3c-2-1.188,0-1,0-1c2,0,3,2,3,2c1.755,2.981,4.878,2.501,6,2c0-1,0.438-2.512,1-3  C7.636,19.508,4,17,4,12s1.004-6,2.004-7C5.802,4.507,4.965,2.685,6.035,0C6.035,0,8,0,10,3c0.991-0.991,4-1,5.001-1  C16,2,19.009,2.009,20,3c2-3,3.969-3,3.969-3c1.07,2.685,0.233,4.507,0.031,5c1,1,2,2,2,7s-3.632,7.508-8,8c0.562,0.488,1,2.21,1,3  V30z"></path></svg></a> <a href="/leetcode-collection/tags"><svg width="1.5em" height="1.5em" viewBox="0 0 1792 1792"><path d="M384 448q0-53-37.5-90.5t-90.5-37.5-90.5 37.5-37.5 90.5 37.5 90.5 90.5 37.5 90.5-37.5 37.5-90.5zm1067 576q0 53-37 90l-491 492q-39 37-91 37-53 0-90-37l-715-716q-38-37-64.5-101t-26.5-117v-416q0-52 38-90t90-38h416q53 0 117 26.5t102 64.5l715 714q37 39 37 91zm384 0q0 53-37 90l-491 492q-39 37-91 37-36 0-59-14t-53-45l470-470q37-37 37-90 0-52-37-91l-715-714q-38-38-102-64.5t-117-26.5h224q53 0 117 26.5t102 64.5l715 714q37 39 37 91z"></path></svg></a> <a href="#" class="ButtonBox__ThemeButtonWrapper-oynpb4-1 gKBelF"><svg width="1.5em" height="1.5em" viewBox="0 5 40 45"><defs id="defs2992"><linearGradient id="linearGradient4879"><stop id="stop4881" offset="0" style="stop-color:#000000ff0000;stop-opacity:0"></stop><stop id="stop4883" offset="1" style="stop-color:#000000ff;stop-opacity:1"></stop></linearGradient></defs><path d="m 17.734375,9.92185 c -4.654915,2.5463 -7.8125,7.4764 -7.8125,13.1563 0,8.2842 6.715729,15 15,15 5.679881,0 10.609961,-3.1576 13.15625,-7.8125 -2.125399,1.1546 -4.567415,1.8125 -7.15625,1.8125 -8.284271,0 -15,-6.7158 -15,-15 0,-2.5889 0.657914,-5.0309 1.8125,-7.1563 z" id="path5315"></path></svg></a></div></div></div></div><div class="Header__Shadow-hszkfo-1 jRIlD"><svg class="Header__StyledShadowBox-hszkfo-4 dptaYY" preserveAspectRatio="none" viewBox="0 0 10 30" width="100%" height="125"><defs><linearGradient id="eased-gradient-gradient-hpoy" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#fff;stop-opacity:1"></stop><stop offset="8.1%" style="stop-color:#fff;stop-opacity:0.987"></stop><stop offset="15.5%" style="stop-color:#fff;stop-opacity:0.951"></stop><stop offset="22.5%" style="stop-color:#fff;stop-opacity:0.896"></stop><stop offset="29%" style="stop-color:#fff;stop-opacity:0.825"></stop><stop offset="35.3%" style="stop-color:#fff;stop-opacity:0.741"></stop><stop offset="47.1%" style="stop-color:#fff;stop-opacity:0.55"></stop><stop offset="52.9%" style="stop-color:#fff;stop-opacity:0.45"></stop><stop offset="58.8%" style="stop-color:#fff;stop-opacity:0.352"></stop><stop offset="64.7%" style="stop-color:#fff;stop-opacity:0.259"></stop><stop offset="71%" style="stop-color:#fff;stop-opacity:0.175"></stop><stop offset="77.5%" style="stop-color:#fff;stop-opacity:0.104"></stop><stop offset="84.5%" style="stop-color:#fff;stop-opacity:0.05"></stop><stop offset="91.9%" style="stop-color:#fff;stop-opacity:0.013"></stop><stop offset="100%" style="stop-color:#fff;stop-opacity:0"></stop></linearGradient></defs><mask id="eased-gradient-mask-hpoy"><rect x="0" y="0" width="100%" height="100%" fill="url(#eased-gradient-gradient-hpoy)"></rect></mask><rect x="0" y="0" width="100%" height="100%" mask="url(#eased-gradient-mask-hpoy)" style="transition:fill 350ms ease 0s"></rect></svg></div><div class="layouts__ContentWrapper-j66onx-0 cyMxxM"><main><h1>2<!-- -->. <!-- -->Add Two Numbers</h1><div class="QuestionMetadata__Container-sc-1xh4054-0 wqYQx"><div class="Badge__Wrapper-sc-16thsut-0 cKJubm"><a href="https://leetcode.com/problems/add-two-numbers/description/" target="_blank" rel="noopener noreferrer" class="QuestionMetadata__LeetcodeLink-sc-1xh4054-3 ctDGFc"><svg aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 30 30"><path d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s1.357.195 1.823.662l2.697 2.606c.514.515 1.365.497 1.9-.038c.535-.536.553-1.387.039-1.901l-2.609-2.636a5.055 5.055 0 0 0-2.445-1.337l2.467-2.503c.516-.514.498-1.366-.037-1.901c-.535-.535-1.387-.552-1.902-.038l-10.1 10.101c-.981.982-1.494 2.337-1.494 3.835c0 1.498.513 2.895 1.494 3.875l4.347 4.361c.981.979 2.337 1.452 3.834 1.452s2.853-.512 3.835-1.494l2.609-2.637c.514-.514.496-1.365-.039-1.9s-1.386-.553-1.899-.039zm4.709-4.92H10.666c-.702 0-1.27.604-1.27 1.346s.568 1.346 1.27 1.346h10.145c.701 0 1.27-.604 1.27-1.346s-.569-1.346-1.27-1.346z"></path></svg>View question in leetcode</a></div><div class="Badge__Wrapper-sc-16thsut-0 QuestionMetadata__ResponsiveWrapper-sc-1xh4054-1 cKJubm hFiLmw"><a class="Badge__BadgeLink-sc-16thsut-1 iWcxTd" href="/leetcode-collection/difficulty/Medium"><div class="Badge__Item-sc-16thsut-2 Badge__DifficultyWrapper-sc-16thsut-5 bbkgUS dReHuU">Medium</div></a><div class="Badge__Item-sc-16thsut-2 Badge__Acceptance-sc-16thsut-3 bbkgUS erAzOP"><svg aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 24 24"><polyline clip-rule="evenodd" fill="none" fill-rule="evenodd" id="Done__x2014__Displayed_on_the_left_side_of_a_contextual_action_bar__x28_CAB_x29__to_allow_the_user_to_dismiss_it._2_" points="  21.2,5.6 11.2,15.2 6.8,10.8 " stroke="#9c989e" stroke-miterlimit="10" stroke-width="2"></polyline><path d="M19.9,13c-0.5,3.9-3.9,7-7.9,7c-4.4,0-8-3.6-8-8c0-4.4,3.6-8,8-8c1.4,0,2.7,0.4,3.9,1l1.5-1.5C15.8,2.6,14,2,12,2  C6.5,2,2,6.5,2,12c0,5.5,4.5,10,10,10c5.2,0,9.4-3.9,9.9-9H19.9z" fill="#9c989e"></path></svg> <!-- -->34.3%</div></div><div class="Badge__Wrapper-sc-16thsut-0 QuestionMetadata__TagsWrapper-sc-1xh4054-2 cKJubm ggOZLu"><a class="Badge__BadgeLink-sc-16thsut-1 iWcxTd" href="/leetcode-collection/tag/linked-list"><div class="Badge__Item-sc-16thsut-2 Badge__TagWrapper-sc-16thsut-4 bbkgUS daQXc">linked-list</div></a><a class="Badge__BadgeLink-sc-16thsut-1 iWcxTd" href="/leetcode-collection/tag/math"><div class="Badge__Item-sc-16thsut-2 Badge__TagWrapper-sc-16thsut-4 bbkgUS daQXc">math</div></a></div></div><div class="question__Markdown-rgvod4-0 laRGkp"><h2>Problem</h2>
+<p>You are given two <b>non-empty</b> linked lists representing two non-negative integers. The digits are stored in <b>reverse order</b>, and each of their nodes contains a single digit. Add the two numbers and return the sum&nbsp;as a linked list.</p>
+<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
+<p>&#xA0;</p>
+<p><strong>Example 1:</strong></p>
+<img alt src="https://assets.leetcode.com/uploads/2020/10/02/addtwonumber1.jpg" style="width: 483px; height: 342px;">
+<pre><strong>Input:</strong> l1 = [2,4,3], l2 = [5,6,4]
+<strong>Output:</strong> [7,0,8]
+<strong>Explanation:</strong> 342 + 465 = 807.
+</pre>
+<p><strong>Example 2:</strong></p>
+<pre>
+<strong>Input:</strong> l1 = [0], l2 = [0]
+<strong>Output:</strong> [0]
+</pre>
+<p><strong>Example 3:</strong></p>
+<pre>
+<strong>Input:</strong> l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
+<strong>Output:</strong> [8,9,9,9,0,0,0,1]
+</pre>
+<p>&nbsp;</p>
+<p><strong>Constraints:</strong></p>
+<ul>
+	<li>The number of nodes in each linked list is in the range <code>[1, 100]</code>.</li>
+	<li><code>0 &lt;= Node.val &lt;= 9</code></li>
+	<li>It is guaranteed that the list represents a number that does not have leading zeros.</li>
+</ul>
+<h2>Discussion</h2>
+<p>The main logic of this algorithm is simple: Mathematical addition
+digit by digit, with digits in linked lists.
+Yet there are tricky points to be handled:</p>
+<ol>
+<li>When two numbers have different numbers of significant figures,</li>
+<li>When carry digits exist in the addition, and</li>
+<li>When the most significant figures of the sum is carry.</li>
+</ol>
+<h3>Solution</h3>
+<p>Solving <code>1</code>, when there is 1 linked list running out of nodes during
+addition, we proceed the addition with the missing digits replaced by 0.</p>
+<p>Solving <code>2</code>, we cache any carry digit in each iteration, and pass the digit
+to the next digital addition. The remainder of the digital sum is saved
+in the result linked list. Thus every iteration perform addition as:
+<code>carry(0/1) + value_1 + value_2</code></p>
+<p>Solving <code>3</code>, we perform similar addition in <code>1</code>, check and handle <code>2</code> after the
+last iteration.</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token comment"># Definition for singly-linked list.</span>
+<span class="token keyword">class</span> <span class="token class-name">ListNode</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> val<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">next</span><span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>val <span class="token operator">=</span> val
+        self<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> <span class="token builtin">next</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">addTwoNumbers</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> l1<span class="token punctuation">:</span> ListNode<span class="token punctuation">,</span> l2<span class="token punctuation">:</span> ListNode<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> ListNode<span class="token punctuation">:</span>
+        result <span class="token operator">=</span> ListNode<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+        node <span class="token operator">=</span> result
+
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>l1 <span class="token keyword">and</span> l1<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">)</span> <span class="token keyword">or</span> <span class="token punctuation">(</span>l2 <span class="token keyword">and</span> l2<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            s <span class="token operator">=</span> node<span class="token punctuation">.</span>val
+
+            <span class="token keyword">if</span> l1<span class="token punctuation">:</span>
+                s <span class="token operator">+=</span> l1<span class="token punctuation">.</span>val
+            <span class="token keyword">if</span> l2<span class="token punctuation">:</span>
+                s <span class="token operator">+=</span> l2<span class="token punctuation">.</span>val
+
+            node<span class="token punctuation">.</span>val <span class="token operator">=</span> s <span class="token operator">%</span> <span class="token number">10</span>
+            node<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> ListNode<span class="token punctuation">(</span>s<span class="token operator">//</span><span class="token number">10</span><span class="token punctuation">)</span>
+
+            l1 <span class="token operator">=</span> l1<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token keyword">or</span> ListNode<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+            l2 <span class="token operator">=</span> l2<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token keyword">or</span> ListNode<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+            node <span class="token operator">=</span> node<span class="token punctuation">.</span><span class="token builtin">next</span>
+
+        <span class="token keyword">if</span> l1<span class="token punctuation">:</span>
+            node<span class="token punctuation">.</span>val <span class="token operator">+=</span> l1<span class="token punctuation">.</span>val
+
+        <span class="token keyword">if</span> l2<span class="token punctuation">:</span>
+            node<span class="token punctuation">.</span>val <span class="token operator">+=</span> l2<span class="token punctuation">.</span>val
+
+        <span class="token keyword">if</span> node<span class="token punctuation">.</span>val <span class="token operator">>=</span> <span class="token number">10</span><span class="token punctuation">:</span>
+            node<span class="token punctuation">.</span>val <span class="token operator">=</span> node<span class="token punctuation">.</span>val <span class="token operator">%</span> <span class="token number">10</span>
+            node<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> ListNode<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+        <span class="token keyword">return</span> result</code></pre></div>
+<h3>Complexity Analysis</h3>
+<ul>
+<li>Time Complexity: <code>O(max(m, n))</code>, wheres <code>m</code> and <code>n</code> are the size of the two
+input list. As only one looping through the larger input linked list is
+required.</li>
+<li>Space Complexity: <code>O(max(m, n))</code>, as the result linked list's size is
+determined by the larger input linked list.</li>
+</ul></div></main></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/question/2_add-two-numbers.md";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-01365ee183870cafc13e.js"],"app":["/app-4c53cdafaaeab9e728f2.js"],"component---src-pages-tags-js":["/component---src-pages-tags-js-c9322ae4f42564777301.js"],"component---src-templates-difficulty-js":["/component---src-templates-difficulty-js-3e5d9bf6a21a26674409.js"],"component---src-templates-home-js":["/component---src-templates-home-js-464f23982cfb825d91b5.js"],"component---src-templates-question-js":["/component---src-templates-question-js-c12cf4babde0720f2caa.js"],"component---src-templates-tag-js":["/component---src-templates-tag-js-a70f85806541690db3fe.js"]};/*]]>*/</script><script src="/leetcode-collection/polyfill-01365ee183870cafc13e.js" nomodule=""></script><script src="/leetcode-collection/webpack-runtime-eac261b7bc6de0da45b5.js" async=""></script><script src="/leetcode-collection/styles-e9d24b1846c7d6eb9685.js" async=""></script><script src="/leetcode-collection/framework-de237a875aa45b276a9d.js" async=""></script><script src="/leetcode-collection/app-4c53cdafaaeab9e728f2.js" async=""></script><script src="/leetcode-collection/component---src-templates-question-js-c12cf4babde0720f2caa.js" async=""></script></body></html>
