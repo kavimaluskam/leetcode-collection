@@ -6,10 +6,11 @@ import ButtonBox from "./ButtonBox"
 import TextIcon from "./TextIcon"
 
 const Container = styled.div`
+  margin: -8px;
   position: sticky;
   z-index: 3;
   top: 0;
-  background: ${props => props.theme.color.background};
+  background: var(--color-background);
   transition: background 350ms ease 0s;
   -webkit-font-smoothing: antialiased;
 `
@@ -44,7 +45,7 @@ const ToolBar = styled.div`
 `
 
 const StyledShadowBox = styled(ShadowBox)`
-  fill: ${props => props.theme.color.background};
+  fill: var(--color-background);
 `
 
 const Header = ({ sourceUrl, title, author }) => {

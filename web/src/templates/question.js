@@ -8,6 +8,15 @@ import Metadata from "../components/QuestionMetadata"
 
 const Markdown = styled.div`
   line-height: 1.5rem;
+  a {
+    color: var(--color-text);
+    text-decoration: none;
+    border-bottom: 0.3px solid var(--color-primary);
+  }
+  a:hover {
+    color: var(--color-primary);
+    border-bottom: 0.3px solid var(--color-primary);
+  }
 `
 
 const Template = ({ data }) => {

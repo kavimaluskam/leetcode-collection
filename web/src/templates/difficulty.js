@@ -9,21 +9,21 @@ const Headline = styled.div`
   margin-block-start: 1.5em;
   margin-block-end: 1.5em;
   a {
-    color: black;
+    color: var(--color-text);
     text-decoration: none;
   }
   a:hover {
-    color: ${props => props.theme.color.primary};
+    color: var(--color-primary);
   }
   h1 {
     display: inline;
   }
   h2 {
-    color: ${props => props.theme.color.lightGrey};
+    color: var(--color-lightGrey);
     display: inline;
   }
   h2 a {
-    color: ${props => props.theme.color.lightGrey};
+    color: var(--color-lightGrey);
   }
 `
 
