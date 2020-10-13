@@ -21,6 +21,9 @@ const Container = styled.div`
 const ListItem = styled.div`
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
+  h2 {
+    margin-bottom: 0.3rem;
+  }
 `
 
 const Listing = ({ listing, showMetadata = false }) => {
@@ -42,14 +45,12 @@ const Listing = ({ listing, showMetadata = false }) => {
               {item.id}: {item.title}
             </h2>
           </Link>
-          {showMetadata && (
-            <Wrapper>
-              <Difficulty difficulty={item.difficulty} />
-              {item.tags.map(tag => (
-                <Tag key={tag} tag={tag} />
-              ))}
-            </Wrapper>
-          )}
+          <Wrapper>
+            <Difficulty difficulty={item.difficulty} />
+            {item.tags.map(tag => (
+              <Tag key={tag} tag={tag} />
+            ))}
+          </Wrapper>
         </ListItem>
       ))}
     </Container>
