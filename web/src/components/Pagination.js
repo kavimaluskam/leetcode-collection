@@ -21,10 +21,10 @@ const Wrapper = styled.div`
   }
 
   li.active {
-    color: ${props => props.theme.color.primary};
+    color: var(--color-primary);
   }
   li.disabled {
-    color: white;
+    color: var(--color-background);
   }
   li.previous {
     margin-right: auto;

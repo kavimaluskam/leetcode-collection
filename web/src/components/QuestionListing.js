@@ -5,16 +5,16 @@ import styled from "styled-components"
 import { Wrapper, Tag, Difficulty } from "./Badge"
 
 const Container = styled.div`
-  border-top: 1px solid rgb(238, 238, 238);
+  border-top: 1px solid var(--color-lightGrey);
   padding-top: 0.25rem;
-  border-bottom: 1px solid rgb(238, 238, 238);
+  border-bottom: 1px solid var(--color-lightGrey);
   padding-bottom: 0.25rem;
   a {
-    color: ${props => props.theme.color.text};
+    color: var(--color-text);
     text-decoration: none;
   }
   a:hover {
-    color: ${props => props.theme.color.primary};
+    color: var(--color-primary);
   }
 `
 

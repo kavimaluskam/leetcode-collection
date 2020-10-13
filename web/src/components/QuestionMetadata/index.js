@@ -7,9 +7,9 @@ import AcceptanceIcon from "./assets/acceptance.svg"
 import LeetcodeIcon from "./assets/leetcode.svg"
 
 const Container = styled.div`
-  border-top: 1px solid rgb(238, 238, 238);
+  border-top: 1px solid var(--color-lightGrey);
   padding-top: 1rem;
-  border-bottom: 1px solid rgb(238, 238, 238);
+  border-bottom: 1px solid var(--color-lightGrey);
   padding-bottom: 0.25rem;
 `
 
@@ -30,20 +30,20 @@ const TagsWrapper = styled(Wrapper)`
 `
 
 const LeetcodeLink = styled.a`
-  color: ${props => props.theme.color.lightGrey};
+  color: var(--color-lightGrey);
   display: flex;
   font-weight: 400;
   font-size: 0.8rem;
   line-height: 1;
   text-decoration: none;
   svg {
-    fill: ${props => props.theme.color.lightGrey};
+    fill: var(--color-lightGrey);
   }
 
   &:hover {
-    color: ${props => props.theme.color.primary};
+    color: var(--color-primary);
     svg {
-      fill: ${props => props.theme.color.primary};
+      fill: var(--color-primary);
     }
   }
 `

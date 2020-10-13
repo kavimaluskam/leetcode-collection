@@ -12,16 +12,16 @@ const AppName = styled.h2`
   font-family: TypoRound, sans-serif;
 `
 const AppNamePrefix = styled.span`
-  color: ${props => props.theme.color.primary};
+  color: var(--color-primary);
 `
 
 const AppNamePostfix = styled.span`
-  color: ${props => props.theme.color.text};
+  color: var(--color-text);
 `
 
 const AuthorName = styled.span`
   font-size: 0.7rem;
-  color: ${props => props.theme.color.lightGrey};
+  color: var(--color-lightGrey);
   display: inline-block;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen-Sans,

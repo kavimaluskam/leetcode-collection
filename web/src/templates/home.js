@@ -7,11 +7,11 @@ import Pagination from "../components/Pagination"
 
 const Markdown = styled.div`
   a {
-    color: ${props => props.theme.color.text};
+    color: var(--color-text);
     text-decoration: none;
   }
   a:hover {
-    color: ${props => props.theme.color.primary};
+    color: var(--color-primary);
   }
 `
 
