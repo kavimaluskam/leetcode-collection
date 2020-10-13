@@ -16,6 +16,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       ) {
         edges {
           node {
+            fileAbsolutePath
             frontmatter {
               id
             }
@@ -61,8 +62,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   // create question detail pages
   questions.forEach(({ node }) => {
+    const path = node.fileAbsolutePath.split("/").pop()
     createPage({
-      path: `/question/${node.frontmatter.id}`,
+      path: `/question/${path}`,
       component: questionTemplate,
       context: {
         // additional data can be passed via context

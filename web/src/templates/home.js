@@ -44,6 +44,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          fileAbsolutePath
           frontmatter {
             id
             title
