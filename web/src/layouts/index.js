@@ -23,6 +23,7 @@ const ContentWrapper = styled.div`
     min(65ch, 100%)
     1fr;
   margin: -8px;
+  width: 100vw;
   padding-top: 80px;
   color: var(--color-text);
   background: var(--color-background);
