@@ -55,6 +55,7 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
+          fileAbsolutePath
           frontmatter {
             id
             title
