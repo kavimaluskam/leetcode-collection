@@ -36,6 +36,10 @@ const ButtonBox = ({ sourceUrl }) => {
     colorMode === "light" ? setColorMode("dark") : setColorMode("light")
   }
 
+  if (!colorMode) {
+    return <></>
+  }
+
   return (
     <Container>
       <Link to={sourceUrl}>
