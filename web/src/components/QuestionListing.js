@@ -27,16 +27,17 @@ const Listing = ({ listing, showMetadata = false }) => {
   const list = listing.edges.map(
     ({
       node: {
+        fileAbsolutePath,
         frontmatter: { ...data },
       },
-    }) => data
+    }) => ({ path: fileAbsolutePath.split("/").pop(), ...data })
   )
 
   return (
     <Container>
       {list.map(item => (
         <ListItem key={item.id}>
-          <Link to={`/question/${item.id}`}>
+          <Link to={`/question/${item.path}`}>
             <h2>
               {item.id}: {item.title}
             </h2>
