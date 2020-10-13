@@ -1,0 +1,193 @@
+pre,
+code {
+	color: var(--color-codeText);
+	text-shadow: none;
+	font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono", "Courier New", monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	line-height: 1.5;
+	-moz-tab-size: 2;
+	-o-tab-size: 2;
+	tab-size: 2;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre::selection,
+code::selection,
+pre ::selection,
+code ::selection,
+pre::-moz-selection,
+code::-moz-selection,
+pre ::-moz-selection,
+code ::-moz-selection {
+	text-shadow: none;
+	background: var(--color-codeSelection);
+}
+
+@media print {
+	pre,
+	code {
+		text-shadow: none;
+	}
+}
+
+pre {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	background: var(--color-codeBackground);
+}
+
+:not(pre) > code {
+	padding: .1em .3em;
+	border-radius: .3em;
+	color: var(--color-codeText);
+	background: var(--color-codeBackground);
+}
+/*********************************************************
+* Tokens
+*/
+.namespace {
+	opacity: .7;
+}
+
+.token.name,
+.token.comment,
+.token.doctype-tag,
+.token.doctype,
+.token.prolog {
+	color: var(--color-codeComment);
+}
+
+.token.operator,
+.token.entity,
+.token.punctuation,
+.language-html .language-css .token.punctuation,
+.language-html .language-javascript .token.punctuation,
+.token.attr-value .token.punctuation.attr-equals {
+	color: var(--color-codePunctuation);
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted,
+.token.unit {
+	color: var(--color-codeConstant);
+}
+
+.token.atrule .token.url .token.punctuation,
+.token.atrule,
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: var(--color-codeSelector);
+}
+
+.language-css .token.string.url {
+	text-decoration: underline;
+}
+
+.token.operator.arrow,
+.token.keyword,
+.token.important,
+.token.punctuation.interpolation-punctuation,
+.token.boolean,
+.token.tag,
+.token.entity {
+	color: var(--color-codeBoolean);
+}
+
+.token.atrule .token.rule,
+.token.keyword.module,
+.token.keyword.control-flow  {
+	color: var(--color-codeControlFlow);
+}
+
+.token.atrule .token.url,
+.token.console,
+.token.constant,
+.token.parameter,
+.token.interpolation,
+.token.property,
+.token.variable,
+.token.imports .token.maybe-class-name,
+.token.exports .token.maybe-class-name,
+.token.attr-name {
+	color: var(--color-codeConsole);
+}
+
+.token.function,
+.token.function .token.maybe-class-name,
+.token.atrule .token.url .token.function {
+	color: var(--color-codeFunction);
+}
+
+.token.regex {
+	color: var(--color-codeRegex);
+}
+
+
+.token.italic {
+	font-style: italic;
+}
+
+.token.class-name,
+.token.maybe-class-name,
+.token.namespace {
+	color: var(--color-codeClassName);
+}
+
+.token.selector,
+.token.escape {
+	color: var(--color-codeEscape);
+}
+
+
+.token.tag .token.punctuation,
+.token.cdata {
+	color: var(--color-codeTag);
+}
+
+.token.attr-value,
+.token.attr-value .token.punctuation {
+	color: var(--color-codeAttrValue);
+}
+
+/*********************************************************
+* Line highlighting
+*/
+pre[data-line] {
+	position: relative;
+}
+
+pre > code {
+	position: relative;
+	z-index: 1;
+}
+
+.line-highlight {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: inherit 0;
+	margin-top: 1em;
+	background: var(--color-codeHighlight);
+	box-shadow: inset 5px 0 0 var(--color-codeHighlightShadow);
+	z-index: 0;
+	pointer-events: none;
+	line-height: inherit;
+	white-space: pre;
+}

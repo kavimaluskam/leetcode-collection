@@ -1,0 +1,11 @@
+{
+  "editor.formatOnSave": false,
+  "editor.rulers": [80],
+  // Enable per-language
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "cSpell.words": [
+    "perentie"
+  ]
+}
