@@ -22,8 +22,6 @@ const ContentWrapper = styled.div`
     1fr
     min(65ch, 100%)
     1fr;
-  margin: -8px;
-  width: 100vw;
   padding-top: 80px;
   color: var(--color-text);
   background: var(--color-background);

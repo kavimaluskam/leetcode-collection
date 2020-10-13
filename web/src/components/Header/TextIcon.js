@@ -7,7 +7,7 @@ import { ThemeContext } from "../../contexts/ThemeContext"
 const Container = styled.div`
   transition: opacity 0.7s;
   opacity: ${props => (props.colorMode ? 1 : 0)};
-  width: 250px;
+  width: 200px;
 `
 const AppName = styled.h2`
   display: inline-block;

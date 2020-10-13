@@ -44,11 +44,11 @@ const ButtonBox = ({ sourceUrl }) => {
       <a target="_blank" rel="noopener noreferrer" href={sourceUrl}>
         <GithubIcon />
       </a>
-      &nbsp; &nbsp;
+      &nbsp;
       <Link to="/tags">
         <TagIcon />
       </Link>
-      &nbsp; &nbsp;
+      &nbsp;
       <ThemeButtonWrapper href="#" alt={colorMode} onClick={toggleColorMode}>
         {colorMode === "light" ? <SunIcon /> : <MoonIcon />}
       </ThemeButtonWrapper>

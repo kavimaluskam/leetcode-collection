@@ -6,8 +6,6 @@ import ButtonBox from "./ButtonBox"
 import TextIcon from "./TextIcon"
 
 const Container = styled.div`
-  margin: -8px;
-  width: 100vw;
   position: sticky;
   z-index: 3;
   top: 0;
