@@ -33,7 +33,7 @@ const Tags = ({ pageContext, data }) => {
     <>
       <Headline>
         <h2>
-          <Link to="/">All questions</Link> /&nbsp;
+          <Link to="/tags">All tags</Link> /&nbsp;
         </h2>
         <h1>{tag}</h1>
       </Headline>
