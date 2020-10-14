@@ -19,6 +19,6 @@ jobs:
       with:
         node-version: 12.x
     - run: yarn
-    - shell: bash
-      run: |
-        yarn build
+      working-directory: ./web
+    - run: yarn build
+      working-directory: ./web
