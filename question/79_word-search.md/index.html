@@ -229,9 +229,9 @@ of the input grid is always necessary.</p>
         <span class="token keyword">return</span> res</code></pre></div>
 <h3>Complexity Analysis</h3>
 <ul>
-<li>Time Complexity: <code>O(3^n)</code>, as similar to <a href="./submission_v0.py3">Trial 1</a>,
-the worst case consists of searching for all elements in the grid,
-with each search continues with all possible elements, which is <code>4 ^ l</code>.</li>
+<li>Time Complexity: <code>O(3^n)</code>, as <code>Trial 1</code>, the worst case consists of
+searching for all elements in the grid, with each search continues
+with all possible elements, which is <code>4 ^ l</code>.</li>
 <li>Space Complexity: <code>O(n)</code>, as we only maintain the input grid in memory.
 While recursion can happens with level at most <code>l</code>,
 we have <code>l</code> smaller than <code>n</code>. Otherwise the result should always be false.</li>
