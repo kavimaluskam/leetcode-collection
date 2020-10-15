@@ -187,9 +187,9 @@ class Solution:
 
 ### Complexity Analysis
 
-- Time Complexity: `O(3^n)`, as similar to [Trial 1](./submission_v0.py3),
-  the worst case consists of searching for all elements in the grid,
-  with each search continues with all possible elements, which is `4 ^ l`.
+- Time Complexity: `O(3^n)`, as `Trial 1`, the worst case consists of
+  searching for all elements in the grid, with each search continues
+  with all possible elements, which is `4 ^ l`.
 
 - Space Complexity: `O(n)`, as we only maintain the input grid in memory.
   While recursion can happens with level at most `l`,
