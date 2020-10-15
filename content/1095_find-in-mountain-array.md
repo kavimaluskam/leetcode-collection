@@ -80,7 +80,7 @@ of the input.
 
 We first find the peak index with a separate function
 `findPeakIndexInMountainArray`, which is exactly the implementation of
-[852. Peak Index in a Mountain Array](./852_peak-index-in-a-mountain-array).
+[852. Peak Index in a Mountain Array](./852_peak-index-in-a-mountain-array.md).
 
 Then we perform binary search on the *rising-side* of the array, then the
 *falling-side*. Note that in each binary search, we have to check if the ending
