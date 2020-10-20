@@ -5,7 +5,7 @@ export const COLORS = {
   },
   background: {
     light: "#ffffff", // white
-    dark: "#121212", // navy navy blue
+    dark: "#1d1e20", // navy navy blue
   },
   primary: {
     light: "#f79f1b",
@@ -37,7 +37,7 @@ export const COLORS = {
   },
   codeBackground: {
     light: "#f5f6f9",
-    dark: "#1e1e1e",
+    dark: "#121212",
   },
   codeSelection: {
     light: "#c1def1",
