@@ -10,7 +10,6 @@ const Container = styled.div`
   z-index: 3;
   top: 0;
   background: var(--color-background);
-  transition: background 350ms ease 0s;
   -webkit-font-smoothing: antialiased;
 `
 

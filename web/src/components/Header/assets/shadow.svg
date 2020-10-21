@@ -32,6 +32,6 @@
   <mask id="eased-gradient-mask-hpoy">
     <rect x="0" y="0" width="100%" height="100%" fill="url(#eased-gradient-gradient-hpoy)"></rect>
   </mask>
-    <rect x="0" y="0" width="100%" height="100%" mask="url(#eased-gradient-mask-hpoy)" style="transition: fill 350ms ease 0s;">
+    <rect x="0" y="0" width="100%" height="100%" mask="url(#eased-gradient-mask-hpoy)">
   </rect>
 </svg>
