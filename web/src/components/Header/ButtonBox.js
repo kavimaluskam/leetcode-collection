@@ -14,7 +14,10 @@ const Container = styled.div`
   opacity: ${props => (props.colorMode ? 1 : 0)};
   display: inline-flex;
   margin-left: auto;
-  height: 1.5rem;
+  height: 100%;
+  a {
+    padding: 12px;
+  }
   svg {
     fill: var(--color-lightGrey);
     &:hover {
@@ -28,6 +31,7 @@ const ThemeButtonWrapper = styled.a`
   transform: rotate(0deg);
   overflow: hidden;
   transition: all 0.3s ease-out;
+  height: 1em;
   transform: ${props => (props.alt === "light" ? `rotate(180deg)` : "")};
 `
 
@@ -44,11 +48,9 @@ const ButtonBox = ({ sourceUrl }) => {
       <a target="_blank" rel="noopener noreferrer" href={sourceUrl}>
         <GithubIcon />
       </a>
-      &nbsp;
       <Link to="/tags">
         <TagIcon />
       </Link>
-      &nbsp;
       <ThemeButtonWrapper href="#" alt={colorMode} onClick={toggleColorMode}>
         {colorMode === "light" ? <SunIcon /> : <MoonIcon />}
       </ThemeButtonWrapper>
