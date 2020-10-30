@@ -30,22 +30,13 @@ const ContentWrapper = styled.div`
 const TemplateWrapper = ({ children }) => {
   const {
     site: {
-      siteMetadata: {
-        url,
-        sourceUrl,
-        title,
-        description,
-        author,
-        keywords,
-        language,
-      },
+      siteMetadata: { url, title, description, author, keywords, language },
     },
   } = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
           url
-          sourceUrl
           title
           description
           author
@@ -73,7 +64,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content={url} />
         <meta property="og:image" content="/img/og-image.webp" />
       </Helmet>
-      <Header sourceUrl={sourceUrl} title={title} author={author} />
+      <Header title={title} author={author} />
       <ContentWrapper>
         <main>{children}</main>
       </ContentWrapper>
