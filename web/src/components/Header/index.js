@@ -46,14 +46,14 @@ const StyledShadowBox = styled(ShadowBox)`
   fill: var(--color-background);
 `
 
-const Header = ({ sourceUrl, title, author }) => {
+const Header = ({ title, author }) => {
   return (
     <>
       <Container>
         <AppBar>
           <ToolBar>
             <TextIcon title={title} author={author} />
-            <ButtonBox sourceUrl={sourceUrl} />
+            <ButtonBox />
           </ToolBar>
         </AppBar>
       </Container>
